@@ -12,6 +12,12 @@ public class HomePage {
     @FindBy(xpath = "(//div[@title=\"Lista mea de dorințe\"])[1]")
     private WebElement favoritesLink;
 
+    @FindBy(xpath ="(//a[@class=\"woodmart-nav-link\"])[20]")
+    private WebElement accesoriiLink;
+
+    @FindBy(xpath ="(//a[contains(@href,'contact')])")
+    private WebElement messageLink;
+
 
 
     public void checkFavoritesLinkIsVisible() {
@@ -21,4 +27,14 @@ public class HomePage {
     public void clickOnMyAccountButton(){
         myAccountButton.click();
     }
+
+
+    public void clickOnAccesoriiLink(){
+        accesoriiLink.click();
+    }
+
+    public void clickOnContactLink() {
+        messageLink.click();
+    }
 }
+

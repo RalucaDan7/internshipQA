@@ -14,4 +14,5 @@ public class HomePageSteps extends BaseTest {
     public void clickOnMyAccountButton() {
         homePage.clickOnMyAccountButton();
     }
+
 }

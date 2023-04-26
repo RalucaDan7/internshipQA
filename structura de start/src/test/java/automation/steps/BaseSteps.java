@@ -14,4 +14,5 @@ public class BaseSteps extends BaseTest {
         basePage.checkPageIsDisplayed(pageName, dataMap.get("url"));
     }
 
+
 }
