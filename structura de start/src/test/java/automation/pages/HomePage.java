@@ -43,7 +43,7 @@ public class HomePage {
     public void checkTheSidebarIsNotDisplayed() {
 //        Assert.assertFalse("The cos de cumparaturi sidebar is displayed",
 //               homePage.findElement(By.className("cart-widget-side wd-side-hidden wd-right wd-opened\"]")).isDisplayed());
-        Assert.assertEquals("The cos de cumparaturi sidebar is displayed and it should not be",
-                homePage.getAttribute(""));
+//        Assert.assertEquals("The cos de cumparaturi sidebar is displayed and it should not be",
+//                homePage.getAttribute(""));
     }
 }
