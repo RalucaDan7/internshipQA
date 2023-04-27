@@ -31,8 +31,6 @@ Feature: Search-UI-Check Search Function
     And A suggestion box is displayed
     Then Suggestion has "tricou" in name
 
-    
-
   @Tickbird-008 @Automation_Smoke @UI @Search
   Scenario: search-UI-008-Check Suggestion redirects to proper page
     Given The user navigates to Home Page
