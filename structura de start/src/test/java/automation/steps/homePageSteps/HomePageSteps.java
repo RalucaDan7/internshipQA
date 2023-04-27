@@ -14,4 +14,9 @@ public class HomePageSteps extends BaseTest {
     public void clickOnMyAccountButton() {
         homePage.clickOnMyAccountButton();
     }
+
+    @When("Click on Noutati Button")
+    public void clickOnNoutatiButton() {
+        homePage.clickOnNoutatiLink();
+    }
 }

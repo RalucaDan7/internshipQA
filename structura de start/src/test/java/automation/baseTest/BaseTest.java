@@ -5,6 +5,7 @@ import automation.pages.BasePage;
 import automation.pages.HomePage;
 import automation.base.DriverUtil;
 import automation.pages.LoginPage;
+import automation.pages.NoutatiPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -20,6 +21,7 @@ public class BaseTest {
 
     protected LoginPage loginPage;
 
+    protected NoutatiPage noutatiPage;
 
     public void initPages(WebDriver driver) {
 
@@ -29,5 +31,7 @@ public class BaseTest {
         PageFactory.initElements(driver, basePage);
         loginPage = new LoginPage();
         PageFactory.initElements(driver, loginPage);
+        noutatiPage = new NoutatiPage();
+        PageFactory.initElements(driver, noutatiPage);
     }
 }

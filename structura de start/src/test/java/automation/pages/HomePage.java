@@ -12,13 +12,19 @@ public class HomePage {
     @FindBy(xpath = "(//div[@title=\"Lista mea de dorințe\"])[1]")
     private WebElement favoritesLink;
 
-
+    @FindBy(xpath = "(//span[contains(text(),'Noutati')])[1]")
+    private WebElement noutatiLink;
 
     public void checkFavoritesLinkIsVisible() {
         Assert.assertTrue("dashboard link is not visible ", favoritesLink.isDisplayed());
     }
 
+    public void clickOnNoutatiLink() {
+        noutatiLink.click();
+
+    }
     public void clickOnMyAccountButton(){
+
         myAccountButton.click();
     }
 }
