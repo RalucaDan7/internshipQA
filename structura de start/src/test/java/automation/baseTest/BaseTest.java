@@ -2,6 +2,7 @@ package automation.baseTest;
 
 
 import automation.pages.BasePage;
+import automation.pages.CosDeCumparaturiPage;
 import automation.pages.HomePage;
 import automation.base.DriverUtil;
 import automation.pages.LoginPage;
@@ -20,6 +21,8 @@ public class BaseTest {
 
     protected LoginPage loginPage;
 
+    protected CosDeCumparaturiPage cosDeCumparaturiPage;
+
 
     public void initPages(WebDriver driver) {
 
@@ -29,5 +32,9 @@ public class BaseTest {
         PageFactory.initElements(driver, basePage);
         loginPage = new LoginPage();
         PageFactory.initElements(driver, loginPage);
+        cosDeCumparaturiPage = new CosDeCumparaturiPage();
+        PageFactory.initElements(driver, cosDeCumparaturiPage);
+
+
     }
 }
