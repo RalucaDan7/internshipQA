@@ -1,10 +1,8 @@
 package automation.baseTest;
 
 
-import automation.pages.BasePage;
-import automation.pages.HomePage;
+import automation.pages.*;
 import automation.base.DriverUtil;
-import automation.pages.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -20,6 +18,10 @@ public class BaseTest {
 
     protected LoginPage loginPage;
 
+    protected SearchPage searchPage;
+
+    protected ProductPage productPage;
+
 
     public void initPages(WebDriver driver) {
 
@@ -29,5 +31,9 @@ public class BaseTest {
         PageFactory.initElements(driver, basePage);
         loginPage = new LoginPage();
         PageFactory.initElements(driver, loginPage);
+        searchPage = new SearchPage();
+        PageFactory.initElements(driver, searchPage);
+        productPage = new ProductPage();
+        PageFactory.initElements(driver, productPage);
     }
 }

@@ -12,6 +12,24 @@ public class HomePage {
     @FindBy(xpath = "(//div[@title=\"Lista mea de dorințe\"])[1]")
     private WebElement favoritesLink;
 
+    @FindBy(xpath = "(//input[@title=\"Cauta produse\"])[1]")
+    private WebElement searchBox;
+
+    @FindBy(xpath = "(//button[@type=\"submit\"])[1]")
+    private WebElement searchButton;
+
+    @FindBy(css = "input[title=\"Cauta produse\"]:nth-of-type(1)")
+    private WebElement searchBoxCSS;
+
+    @FindBy(css = "button[class=\"searchsubmit\"]:nth-of-type(1)")
+    private WebElement searchButtonCSS;
+
+    @FindBy(xpath = "//div[@class=\"wd-dropdown-results wd-scroll wd-dropdown wd-opened\"]")
+    private WebElement suggestionBox;
+
+    @FindBy(xpath = "//h4[@class=\"wd-entities-title\"]")
+    private WebElement suggestions;
+
 
 
     public void checkFavoritesLinkIsVisible() {
@@ -20,5 +38,33 @@ public class HomePage {
 
     public void clickOnMyAccountButton(){
         myAccountButton.click();
+    }
+
+    public void insertKeywordInSearchBox(String pass) {
+        searchBox.sendKeys(pass);
+    }
+
+    public void clickSearch(){
+        searchButton.click();
+    }
+
+    public void insertKeywordInSearchBoxCSS(String pass) {
+        searchBoxCSS.sendKeys(pass);
+    }
+
+    public void clickSearchCSS(){
+        searchButtonCSS.click();
+    }
+
+    public void checkSugestionBoxIsDisplayed() {
+        Assert.assertTrue("suggestion box is not displayed", suggestionBox.isDisplayed());
+    }
+
+    public void checkSuggestionIsCorrect(String pass) {
+        Assert.assertTrue("Suggestion is not correct", suggestions.getText().toLowerCase().contains(pass.toLowerCase()));
+    }
+
+    public void clickSuggestion() {
+        suggestions.click();
     }
 }
