@@ -15,4 +15,23 @@ public class HomePageSteps extends BaseTest {
         homePage.clickOnMyAccountButton();
     }
 
+    @When("Click the  Accesorii button")
+    public void clickOnAccesoriiButton() {
+        homePage.clickOnAccesoriiLink();
+    }
+
+
+
+    @When("User mouse over the Accesorii dropdown")
+    public void mouseOverAccesorii() throws InterruptedException {
+        homePage.mouseOverAccesoriiButton();
+    }
+
+
+
+    @When("Click on Trimite-ne mesaj button")
+    public void clickOnContactButton() {
+        homePage.clickOnContactLink();
+    }
 }
+

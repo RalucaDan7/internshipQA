@@ -5,5 +5,5 @@ Feature: Contact-UI-Main Page
     Given The user navigates to Home Page
     When  Insert "w${#p2m1iu2%" Password And Click Submit
     And Click on Trimite-ne mesaj button
-#    Then A form with contact details should be displayed
+     Then A form named "Contact" is displayed
 #      | url | qa-training |
