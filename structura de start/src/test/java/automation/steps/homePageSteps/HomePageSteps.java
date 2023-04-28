@@ -26,7 +26,7 @@ public class HomePageSteps extends BaseTest {
     }
 
     @And("Click Search")
-    public void clickSearch(){
+    public void clickSearch() {
 
         homePage.clickSearch();
     }
@@ -38,24 +38,24 @@ public class HomePageSteps extends BaseTest {
     }
 
     @And("Click Search By CSS")
-    public void clickSearchCSS(){
+    public void clickSearchCSS() {
 
         homePage.clickSearchCSS();
     }
 
     @Then("A suggestion box is displayed")
-    public void checkSuggestionBoxIsDisplayed(){
+    public void checkSuggestionBoxIsDisplayed() {
 
         homePage.checkSugestionBoxIsDisplayed();
     }
 
     @Then("Suggestion has {string} in name")
-    public void checkSuggestionIsCorrect(String pass){
+    public void checkSuggestionIsCorrect(String pass) {
         homePage.checkSuggestionIsCorrect(pass);
     }
 
     @And("Click On Suggestion")
-    public void clickSuggestion(){
+    public void clickSuggestion() {
 
         homePage.clickSuggestion();
     }
