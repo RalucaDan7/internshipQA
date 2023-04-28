@@ -18,4 +18,9 @@ public class FavoriteSteps extends BaseTest {
     public void clickOnAcasaButton() {
         favoritePage.clickOnAcasabutton();
     }
+
+    @Then("Check {string} title is present in favorites section")
+    public void checkTitlePantaloniMudSandPentruFete(String title){
+        favoritePage.checkTitlePantaloniMudSandPentruFete(title);
+    }
 }

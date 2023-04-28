@@ -22,6 +22,10 @@ public class BaseTest {
 
     protected ForgotPasswordPage forgotPasswordPage;
 
+    protected GirlsSectionPage girlsSectionPage;
+
+    protected ProductPage productPage;
+
 
     public void initPages(WebDriver driver) {
 
@@ -35,6 +39,10 @@ public class BaseTest {
         PageFactory.initElements(driver, favoritePage);
         forgotPasswordPage = new ForgotPasswordPage();
         PageFactory.initElements(driver, forgotPasswordPage);
+        girlsSectionPage = new GirlsSectionPage();
+        PageFactory.initElements(driver, girlsSectionPage);
+        productPage = new ProductPage();
+        PageFactory.initElements(driver,productPage);
 
     }
 }

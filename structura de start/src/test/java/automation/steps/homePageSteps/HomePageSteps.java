@@ -23,12 +23,15 @@ public class HomePageSteps extends BaseTest {
     }
 
 
-    @Then("Check {string} title {string} {string} from Home Page")
-    public void checkTitleExploreazacategorii(String title,String a, String b){
-        homePage.checkTitleExploreazacategorii(title, a,b);
+    @Then("Check {string} title from Home Page")
+    public void checkTitleExploreazacategorii(String title){
+        homePage.checkTitleExploreazacategorii(title);
     }
 
     @And("Click On FogotPassword Link")
     public void clickOnForgotPasswordLink(){homePage.clickOnForgotPasswordLink();}
+
+    @And("Click on Descopera Colectia from home page")
+    public void clickOnDescoperaColectiabutton(){homePage.clickOnDescoperaColectiabutton();}
 
 }

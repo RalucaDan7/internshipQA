@@ -20,6 +20,9 @@ public class HomePage {
     @FindBy(css = "a[href=\"https://qa-training.co.in/contul-meu/lost-password/\"]")
     private WebElement forgotPasswordLink;
 
+    @FindBy(css = "a[href=\"/categorie/fete/\"]")
+    private WebElement descoperaColectiaButton;
+
 
     public void checkFavoritesLinkIsVisible() {
         Assert.assertTrue("dashboard link is not visible ", favoritesLink.isDisplayed());
@@ -34,11 +37,13 @@ public class HomePage {
         favoritesLink.click();
     }
 
-    public void checkTitleExploreazacategorii(String title,String bogdan, String ionut) {
-        Assert.assertTrue("Exploreaza categorii title is not visible ", exploreazaCategoriiTitle.isDisplayed());
-        Assert.assertTrue("Exploreaza categorii title is not visible ", exploreazaCategoriiTitle.getText().equals(title));
+    public void checkTitleExploreazacategorii(String title) {
+        Assert.assertTrue("Exploreaza categorii title is not visible", exploreazaCategoriiTitle.isDisplayed());
+        Assert.assertTrue("Exploreaza categorii title is not visible", exploreazaCategoriiTitle.getText().equals(title));
     }
     public void clickOnForgotPasswordLink(){
         forgotPasswordLink.click();
     }
+
+    public void clickOnDescoperaColectiabutton(){descoperaColectiaButton.click();}
 }

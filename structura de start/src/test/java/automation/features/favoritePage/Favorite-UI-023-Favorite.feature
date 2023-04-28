@@ -7,4 +7,4 @@ Feature: Dashboard-UI-Favorite Page
     And   Click On Lista mea de dorințe Button
     Then  Check title Lista de dorinte from Lista de dorințe page
     And   Click On Acasa Button
-    Then  Check "Exploreaza categorii" title "bla" "bla" from Home Page
+    Then  Check "Exploreaza categorii" title from Home Page

@@ -13,6 +13,9 @@ public class FavoritePage {
     @FindBy(css = "a[property=\"v:title\"]")
     private WebElement acasaButton;
 
+    @FindBy(css = "h3[class=\"wd-entities-title\"]")
+    private WebElement pantaloniMudSandPentruFeteProduct;
+
     public void checkTitleListadeDorinte() {
         Assert.assertTrue("Title Lista de Dorinte is not displayed", favoriteTitle.isDisplayed());
     }
@@ -20,4 +23,9 @@ public class FavoritePage {
     public void clickOnAcasabutton(){
         acasaButton.click();
     }
-}
+
+    public void checkTitlePantaloniMudSandPentruFete(String title){
+        Assert.assertTrue("Pantaloni Mud Sand product is not displayed", pantaloniMudSandPentruFeteProduct.isDisplayed());
+        Assert.assertTrue("Pantaloni Mud Sand product is not displayed", pantaloniMudSandPentruFeteProduct.getText().equals(title));
+    }
+    }
