@@ -13,5 +13,4 @@ public class BaseSteps extends BaseTest {
         Map<String, String> dataMap = data.asMap(String.class, String.class);
         basePage.checkPageIsDisplayed(pageName, dataMap.get("url"));
     }
-
 }

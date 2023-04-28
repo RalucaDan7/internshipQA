@@ -1,11 +1,8 @@
 package automation.baseTest;
 
 
-import automation.pages.BasePage;
-import automation.pages.CosDeCumparaturiPage;
-import automation.pages.HomePage;
+import automation.pages.*;
 import automation.base.DriverUtil;
-import automation.pages.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -23,6 +20,8 @@ public class BaseTest {
 
     protected CosDeCumparaturiPage cosDeCumparaturiPage;
 
+    protected MagazinPage magazinPage;
+
 
     public void initPages(WebDriver driver) {
 
@@ -34,6 +33,8 @@ public class BaseTest {
         PageFactory.initElements(driver, loginPage);
         cosDeCumparaturiPage = new CosDeCumparaturiPage();
         PageFactory.initElements(driver, cosDeCumparaturiPage);
+        magazinPage = new MagazinPage();
+        PageFactory.initElements(driver, magazinPage);
 
 
     }
