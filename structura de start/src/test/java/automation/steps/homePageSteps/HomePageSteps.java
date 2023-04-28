@@ -33,5 +33,10 @@ public class HomePageSteps extends BaseTest {
     public void clickOnContactButton() {
         homePage.clickOnTheContactButton();
     }
+    @When("Click on Trimite-ne mesaj button  using CSS")
+    public void clickOnContactButtonCss() throws InterruptedException {
+        Thread.sleep(1000);
+        homePage.clickOnTheContactButtonCss();
+    }
 }
 

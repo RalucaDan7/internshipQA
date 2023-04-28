@@ -12,6 +12,9 @@ import cucumber.api.java.en.Then;
         public void checkContactPageIsDisplayed(String title) {
             contactPage.checkContactTitle(title);
         }
-//    @Then("")
+        @Then("A form named {string} is displayed using Css")
+        public void checkContactPageIsDisplayedCss(String title) {
+            contactPage.checkContactTitleCss(title);
+        }
     }
 

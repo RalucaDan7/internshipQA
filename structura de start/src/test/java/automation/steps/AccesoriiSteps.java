@@ -18,7 +18,7 @@ public class AccesoriiSteps extends BaseTest {
     @Then ("A dropdown menu containing the following items is displayed")
     public void checkDropdownContentIsDisplayed(DataTable dataTable) {
         List<String> dataL = dataTable.asList(String.class);
-        //System.out.println(dataL);
+        System.out.println(dataL);
         for (int i = 0; i<dataL.size(); i++)
         {
             accesoriiPage.checkAccesoriiElements(dataL.get(i));

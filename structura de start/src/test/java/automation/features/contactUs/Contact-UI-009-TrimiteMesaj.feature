@@ -6,4 +6,10 @@ Feature: Contact-UI-Main Page
     When  Insert "w${#p2m1iu2%" Password And Click Submit
     And Click on Trimite-ne mesaj button
      Then A form named "Contact" is displayed
-#      | url | qa-training |
+
+  @Tickbird-010 @Automation_Smoke @UI
+  Scenario: contact-UI-009-Check the Contact section with Css
+    Given The user navigates to Home Page
+    When  Insert "w${#p2m1iu2%" Password And Click Submit
+    And Click on Trimite-ne mesaj button  using CSS
+    Then A form named "Contact" is displayed using Css

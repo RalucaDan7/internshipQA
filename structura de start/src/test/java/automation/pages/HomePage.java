@@ -19,8 +19,11 @@ public class HomePage {
     @FindBy(xpath = "(//a[@class=\"woodmart-nav-link\"])[20]")
     private WebElement accesoriiLink;
 
-    @FindBy(xpath = "(//a[contains(@href,'contact')])")
+    @FindBy(xpath = "(//div[contains(@class,'wd-cookies-inner')])")
     private WebElement messageLink;
+
+    @FindBy(css = "div.wd-cookies-inner")
+    private WebElement messageLinkCss;
 
 
     @FindBy(css = "li[id=\"menu-item-10614\"]")
@@ -54,6 +57,10 @@ public class HomePage {
 
     public void clickOnTheContactButton() {
         messageLink.click();
+    }
+    public void clickOnTheContactButtonCss() {
+
+        messageLinkCss.click();
     }
 
 }
