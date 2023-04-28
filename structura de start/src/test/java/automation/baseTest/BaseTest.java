@@ -22,6 +22,8 @@ public class BaseTest {
 
     protected ContactPage  contactPage;
 
+//    protected AccesoriiDropdPage accesoriiDropdPage;
+
     public void initPages(WebDriver driver) {
 
         homePage = new HomePage();
@@ -34,5 +36,7 @@ public class BaseTest {
         PageFactory.initElements(driver, accesoriiPage);
         contactPage = new ContactPage();
         PageFactory.initElements(driver, contactPage);
+//        accesoriiDropdPage = new AccesoriiDropdPage();
+//        PageFactory.initElements(driver, accesoriiDropdPage);
     }
 }

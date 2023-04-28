@@ -2,10 +2,13 @@ package automation.pages;
 
 import automation.base.DriverUtil;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage {
 
@@ -23,8 +26,12 @@ public class HomePage {
 
 
 
-    @FindBy(xpath = "(//span[contains(@class,'nav-link-text')])[6]")
+
+    @FindBy(css = "li[id=\"menu-item-10614\"]")
     private WebElement accesoriiLinkMenu;
+
+    @FindBy(xpath = "(//a[@class=\"woodmart-nav-link\"])[20]")
+    private WebElement subAccesoriiLinkMenu;
 
 
     public void checkFavoritesLinkIsVisible() {
@@ -39,16 +46,19 @@ public class HomePage {
 
     public void mouseOverAccesoriiButton() throws InterruptedException {
         Actions action = new Actions(DriverUtil.getDriver());
-        System.out.println("Ce e aici");
-        action.moveToElement(accesoriiLinkMenu).perform();
-        Thread.sleep(3000);
+        action.moveToElement(accesoriiLinkMenu).build().perform();
+        action.moveToElement(subAccesoriiLinkMenu).perform();
+        Thread.sleep(1000);
+
+
+
     }
 
     public void clickOnAccesoriiLink() {
         accesoriiLink.click();
     }
 
-    public void clickOnContactLink() {
+    public void clickOnTheContactButton() {
         messageLink.click();
     }
 

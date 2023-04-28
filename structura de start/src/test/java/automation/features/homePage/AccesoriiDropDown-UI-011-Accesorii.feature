@@ -5,7 +5,7 @@ Feature: AccesoriiDropDown-UI-Main Page
     Given The user navigates to Home Page
     When  Insert "w${#p2m1iu2%" Password And Click Submit
     When  User mouse over the Accesorii dropdown
-    Then  A button containing  text is displayed
+    Then  A dropdown menu containing the following items is displayed
      |Caciuli si fulare|
      |Genti si rucsacuri|
      |Manusi|

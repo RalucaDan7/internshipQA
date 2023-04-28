@@ -31,7 +31,7 @@ public class HomePageSteps extends BaseTest {
 
     @When("Click on Trimite-ne mesaj button")
     public void clickOnContactButton() {
-        homePage.clickOnContactLink();
+        homePage.clickOnTheContactButton();
     }
 }
 
