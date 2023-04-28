@@ -39,4 +39,3 @@ public class HomePageSteps extends BaseTest {
         homePage.clickOnTheContactButtonCss();
     }
 }
-
