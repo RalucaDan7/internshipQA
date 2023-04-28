@@ -6,21 +6,24 @@ import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AccesoriiPage {
 
-    @FindBy(xpath ="(//a[@class=\"woodmart-nav-link\"])[20]")
-    private WebElement accesoriiLink;
+
     @FindBy(xpath ="(//h1[@class=\"entry-title title\"])")
     private WebElement accesoriiTitle;
 
 
-    @FindBy(css = "a[class=\"woodmart-nav-link\"):nth-child(21)")
+    //@FindBy(css = "a[class=\"woodmart-nav-link\"]:nth-child(21)")
+    @FindBy(xpath ="(//a[@class=\"woodmart-nav-link\"])[21]")
     private WebElement caciuliTitle;
 
-    @FindBy(css = "a[class=\"woodmart-nav-link\"):nth-child(22)")
+    @FindBy(xpath ="(//a[@class=\"woodmart-nav-link\"])[22]")
     private WebElement gentiRucsacuriTitle;
 
-    @FindBy(css = "a[class=\"woodmart-nav-link\"):nth-child(23)")
+    @FindBy(xpath ="(//a[@class=\"woodmart-nav-link\"])[23]")
     private WebElement manusiTitle;
 
 
@@ -32,9 +35,18 @@ public class AccesoriiPage {
 
 
 
-    public  void checkAccesoriiElements(String data) {
-       Assert.assertTrue("The URL of " + pageName + " is not correct", DriverUtil.getDriver().getCurrentUrl().contains(url));
-        System.out.println(data);
+    public  void checkAccesoriiElements(String menuElement) {
+
+
+        List<String> elementAccesorii = new ArrayList<>();
+
+        elementAccesorii.add(caciuliTitle.getText());
+        elementAccesorii.add(gentiRucsacuriTitle.getText());
+        elementAccesorii.add(manusiTitle.getText());
+
+
+        Assert.assertTrue("The menu element " + menuElement + " was not found in accesorii dropdown menu", elementAccesorii.contains(menuElement));
+
     }
 }
 

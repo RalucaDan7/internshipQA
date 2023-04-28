@@ -2,13 +2,11 @@ package automation.pages;
 
 import automation.base.DriverUtil;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 public class HomePage {
 
@@ -23,8 +21,6 @@ public class HomePage {
 
     @FindBy(xpath = "(//a[contains(@href,'contact')])")
     private WebElement messageLink;
-
-
 
 
     @FindBy(css = "li[id=\"menu-item-10614\"]")
@@ -49,8 +45,6 @@ public class HomePage {
         action.moveToElement(accesoriiLinkMenu).build().perform();
         action.moveToElement(subAccesoriiLinkMenu).perform();
         Thread.sleep(1000);
-
-
 
     }
 
