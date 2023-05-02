@@ -34,4 +34,7 @@ public class HomePageSteps extends BaseTest {
     @And("Click on Descopera Colectia from home page")
     public void clickOnDescoperaColectiabutton(){homePage.clickOnDescoperaColectiabutton();}
 
+    @And("Click On News button from Home page")
+    public void clickOnNewsButton(){homePage.clickOnNewsButton();}
+
 }

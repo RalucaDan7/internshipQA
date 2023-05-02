@@ -26,6 +26,10 @@ public class BaseTest {
 
     protected ProductPage productPage;
 
+    protected NewsPage newsPage;
+
+    protected MagazinePage magazinePage;
+
 
     public void initPages(WebDriver driver) {
 
@@ -43,6 +47,10 @@ public class BaseTest {
         PageFactory.initElements(driver, girlsSectionPage);
         productPage = new ProductPage();
         PageFactory.initElements(driver,productPage);
+        newsPage = new NewsPage();
+        PageFactory.initElements(driver,newsPage);
+        magazinePage = new MagazinePage();
+        PageFactory.initElements(driver,magazinePage);
 
     }
 }

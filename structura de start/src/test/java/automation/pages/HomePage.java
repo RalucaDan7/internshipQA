@@ -23,6 +23,9 @@ public class HomePage {
     @FindBy(css = "a[href=\"/categorie/fete/\"]")
     private WebElement descoperaColectiaButton;
 
+    @FindBy(xpath = "//ul[@id=\"menu-primary-girl-menu\"]/li/a/span[text()=\"Noutati\"]")
+    private WebElement newsButton;
+
 
     public void checkFavoritesLinkIsVisible() {
         Assert.assertTrue("dashboard link is not visible ", favoritesLink.isDisplayed());
@@ -46,4 +49,6 @@ public class HomePage {
     }
 
     public void clickOnDescoperaColectiabutton(){descoperaColectiaButton.click();}
+
+    public void clickOnNewsButton(){newsButton.click();}
 }
