@@ -2,6 +2,7 @@ package automation.steps.CosDeCumparaturiSteps;
 
 import automation.baseTest.BaseTest;
 import automation.pages.CosDeCumparaturiPage;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 
 public class CosDeCumparaturiSteps extends BaseTest {
@@ -10,7 +11,7 @@ public class CosDeCumparaturiSteps extends BaseTest {
         cosDeCumparaturiPage.checkCosDeCumparaturiMessageIsDisplayed();
     }
 
-    @Then("Click on Inchide button on the sidebar")
+    @And("Click on Inchide button on the sidebar")
     public void clickOnInchideButtonOnTheSidebar() {
         cosDeCumparaturiPage.clickOnInchideButtonOnTheSidebar();
     }

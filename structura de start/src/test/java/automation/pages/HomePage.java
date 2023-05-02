@@ -31,11 +31,10 @@ public class HomePage {
         cosDeCumparaturiLink.click();
     }
 
-
-
     public void checkTheSidebarIsNotDisplayed() {
-        Assert.assertTrue("The cos de cumparaturi sidebar is displayed and it should not be",
-                cosDeCumparaturiSidebarInchis.getAttribute("class") == null);
-//        Daca nu gaseste niciun atribut cu valoarea wd-opened returneaza null si atunci inseamna ca sidebar-ul e inchis
+//       Assert.assertTrue("The cos de cumparaturi sidebar is displayed and it should not be",
+//                cosDeCumparaturiSidebarInchis.getAttribute("class").equals("cart-widget-side wd-side-hidden wd-right"));
+
+        Assert.assertEquals(cosDeCumparaturiSidebarInchis.getAttribute("class"), "cart-widget-side wd-side-hidden wd-right");
     }
 }
