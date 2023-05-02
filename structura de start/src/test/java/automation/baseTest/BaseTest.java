@@ -26,6 +26,8 @@ public class BaseTest {
 
     protected MagazinPage magazinPage;
 
+    protected BluzeSiHanoraceFetePage bluzeSiHanoraceFetePage;
+
 
     public void initPages(WebDriver driver) {
 
@@ -43,6 +45,8 @@ public class BaseTest {
         PageFactory.initElements(driver, cosDeCumparaturiPage);
         magazinPage = new MagazinPage();
         PageFactory.initElements(driver, magazinPage);
+        bluzeSiHanoraceFetePage = new BluzeSiHanoraceFetePage();
+        PageFactory.initElements(driver, bluzeSiHanoraceFetePage);
 
     }
 }
