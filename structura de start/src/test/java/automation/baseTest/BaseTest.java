@@ -22,6 +22,10 @@ public class BaseTest {
 
     protected ContactPage contactPage;
 
+    protected CosDeCumparaturiPage cosDeCumparaturiPage;
+
+    protected MagazinPage magazinPage;
+
 
     public void initPages(WebDriver driver) {
 
@@ -35,6 +39,10 @@ public class BaseTest {
         PageFactory.initElements(driver, accesoriiPage);
         contactPage = new ContactPage();
         PageFactory.initElements(driver, contactPage);
+        cosDeCumparaturiPage = new CosDeCumparaturiPage();
+        PageFactory.initElements(driver, cosDeCumparaturiPage);
+        magazinPage = new MagazinPage();
+        PageFactory.initElements(driver, magazinPage);
 
     }
 }

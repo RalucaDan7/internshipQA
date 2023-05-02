@@ -15,6 +15,9 @@ public class HomePage {
     @FindBy(xpath = "(//div[@title=\"Lista mea de dorințe\"])[1]")
     private WebElement favoritesLink;
 
+    @FindBy(css = "a[title=\"Cos de cumparaturi\"]")
+    private WebElement cosDeCumparaturiLink;
+
     @FindBy(xpath = "(//a[@class=\"woodmart-nav-link\"])[20]")
     private WebElement accesoriiLink;
 
@@ -34,6 +37,9 @@ public class HomePage {
     @FindBy(xpath = "(//a[@class=\"woodmart-nav-link\"])[24]")
     private WebElement dropDownItem;
 
+    @FindBy(css = "div[class=\"cart-widget-side wd-side-hidden wd-right\"]")
+    private WebElement cosDeCumparaturiSidebarInchisElement;
+
     public void checkFavoritesLinkIsVisible() {
         Assert.assertTrue("dashboard link is not visible ", favoritesLink.isDisplayed());
     }
@@ -43,7 +49,13 @@ public class HomePage {
         myAccountButton.click();
     }
 
+    public void clickOnCosDeCumparaturi() {
+        cosDeCumparaturiLink.click();
+    }
 
+    public void checkTheSidebarIsNotDisplayed() {
+        Assert.assertEquals(cosDeCumparaturiSidebarInchisElement.getAttribute("class"), "cart-widget-side wd-side-hidden wd-right");
+    }
     public void mouseOverAccesoriiButton() {
         Actions action = new Actions(DriverUtil.getDriver());
         action.moveToElement(accesoriiLinkMenu).build().perform();
@@ -55,6 +67,7 @@ public class HomePage {
     public void clickOnAccesoriiLink() {
         accesoriiLink.click();
     }
+
 
     public void clickOnDropdownItem() {
         dropDownItem.click();

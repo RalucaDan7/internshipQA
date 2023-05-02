@@ -1,6 +1,8 @@
 package automation.steps.homePageSteps;
 
 import automation.baseTest.BaseTest;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.And;
 
@@ -16,6 +18,15 @@ public class HomePageSteps extends BaseTest {
         homePage.clickOnMyAccountButton();
     }
 
+    @When("Click on Cos de cumparaturi")
+    public void clickOnCosDeCumparaturi() {
+        homePage.clickOnCosDeCumparaturi();
+    }
+
+    @And("Check the sidebar is not displayed")
+    public void checkTheSidebarIsNotDisplayed() {
+        homePage.checkTheSidebarIsNotDisplayed();
+    }
     @And("Click the  Accesorii button")
     public void clickOnAccesoriiButton() {
         homePage.clickOnAccesoriiLink();
