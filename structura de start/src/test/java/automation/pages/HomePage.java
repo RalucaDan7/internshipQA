@@ -99,7 +99,7 @@ public class HomePage {
     public void clickBaietiCategory() {
         baietiCategoryButton.click();
     }
-}
+
     public void clickOnCosDeCumparaturi() {
         cosDeCumparaturiLink.click();
     }
