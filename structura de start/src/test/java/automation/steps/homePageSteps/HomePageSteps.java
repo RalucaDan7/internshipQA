@@ -8,6 +8,7 @@ import cucumber.api.java.en.And;
 
 public class HomePageSteps extends BaseTest {
 
+    public String searchString;
     @When("Check Favorites Link Is Visible")
     public void checkFavoritesLinkIsVisible() {
         homePage.checkFavoritesLinkIsVisible();
@@ -52,4 +53,50 @@ public class HomePageSteps extends BaseTest {
     public void clickOnContactButtonCss() {
         homePage.clickOnTheContactButtonCss();
     }
+    @And("Insert {string} In Search Box")
+    public void insertKeywordInSearchBox(String pass) {
+
+        homePage.insertKeywordInSearchBox(pass);
+    }
+
+    @And("Click Search")
+    public void clickSearch() {
+
+        homePage.clickSearch();
+    }
+
+    @And("Insert {string} In Search Box By CSS")
+    public void insertKeywordInSearchBoxCSS(String pass) {
+
+        homePage.insertKeywordInSearchBoxCSS(pass);
+    }
+
+    @And("Click Search By CSS")
+    public void clickSearchCSS() {
+
+        homePage.clickSearchCSS();
+    }
+
+    @Then("A suggestion box is displayed")
+    public void checkSuggestionBoxIsDisplayed() {
+
+        homePage.checkSugestionBoxIsDisplayed();
+    }
+
+    @Then("Suggestion has {string} in name")
+    public void checkSearchSuggestionIsCorrect(String pass) {
+        homePage.checkSearchSuggestionIsCorrect(pass);
+    }
+
+    @And("Click On Suggestion")
+    public void clickSuggestion() {
+
+        homePage.clickSuggestion();
+    }
+
+    @And("The user clicks on Baieti")
+    public void clickBaietiCategory(){
+        homePage.clickBaietiCategory();
+    }
+
 }
