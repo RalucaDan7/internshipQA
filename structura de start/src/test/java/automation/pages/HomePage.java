@@ -1,8 +1,11 @@
 package automation.pages;
 
+import automation.base.DriverUtil;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.interactions.Actions;
+
 
 public class HomePage {
 
@@ -33,16 +36,38 @@ public class HomePage {
     @FindBy(xpath = "(//div[@class=\"wrapper-content-banner wd-fill wd-items-bottom wd-justify-center\"])[2]")
     private WebElement baietiCategoryButton;
 
+    @FindBy(css = "a[title=\"Cos de cumparaturi\"]")
+    private WebElement cosDeCumparaturiLink;
 
+    @FindBy(xpath = "(//a[@class=\"woodmart-nav-link\"])[20]")
+    private WebElement accesoriiLink;
+
+    @FindBy(xpath = "(//a[contains(@href,'/contact/')])")
+    private WebElement messageLink;
+
+    @FindBy(css = "a[href='/contact/']")
+    private WebElement messageLinkCss;
+
+    @FindBy(css = "li[id=\"menu-item-10614\"]")
+    private WebElement accesoriiLinkMenu;
+
+    @FindBy(xpath = "(//a[@class=\"woodmart-nav-link\"])[20]")
+    private WebElement subAccesoriiLinkMenu;
+
+    @FindBy(xpath = "(//a[@class=\"woodmart-nav-link\"])[24]")
+    private WebElement dropDownItem;
+
+    @FindBy(css = "div[class=\"cart-widget-side wd-side-hidden wd-right\"]")
+    private WebElement cosDeCumparaturiSidebarInchisElement;
 
     public void checkFavoritesLinkIsVisible() {
         Assert.assertTrue("dashboard link is not visible ", favoritesLink.isDisplayed());
     }
 
-    public void clickOnMyAccountButton(){
+
+    public void clickOnMyAccountButton() {
         myAccountButton.click();
     }
-
     public void insertKeywordInSearchBox(String pass) {
         searchBox.sendKeys(pass);
     }
@@ -75,3 +100,37 @@ public class HomePage {
         baietiCategoryButton.click();
     }
 }
+    public void clickOnCosDeCumparaturi() {
+        cosDeCumparaturiLink.click();
+    }
+
+    public void checkTheSidebarIsNotDisplayed() {
+        Assert.assertEquals(cosDeCumparaturiSidebarInchisElement.getAttribute("class"), "cart-widget-side wd-side-hidden wd-right");
+    }
+    public void mouseOverAccesoriiButton() {
+        Actions action = new Actions(DriverUtil.getDriver());
+        action.moveToElement(accesoriiLinkMenu).build().perform();
+        action.moveToElement(subAccesoriiLinkMenu).perform();
+
+
+    }
+
+    public void clickOnAccesoriiLink() {
+        accesoriiLink.click();
+    }
+
+
+    public void clickOnDropdownItem() {
+        dropDownItem.click();
+    }
+
+    public void clickOnTheContactButton() {
+        messageLink.click();
+    }
+
+    public void clickOnTheContactButtonCss() {
+        messageLinkCss.click();
+    }
+
+}
+

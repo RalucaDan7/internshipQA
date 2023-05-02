@@ -26,6 +26,13 @@ public class BaseTest {
 
     protected CartPage cartPage;
 
+    protected AccesoriiPage accesoriiPage;
+
+    protected ContactPage contactPage;
+
+    protected CosDeCumparaturiPage cosDeCumparaturiPage;
+
+    protected MagazinPage magazinPage;
 
     public void initPages(WebDriver driver) {
 
@@ -35,6 +42,14 @@ public class BaseTest {
         PageFactory.initElements(driver, basePage);
         loginPage = new LoginPage();
         PageFactory.initElements(driver, loginPage);
+        accesoriiPage = new AccesoriiPage();
+        PageFactory.initElements(driver, accesoriiPage);
+        contactPage = new ContactPage();
+        PageFactory.initElements(driver, contactPage);
+        cosDeCumparaturiPage = new CosDeCumparaturiPage();
+        PageFactory.initElements(driver, cosDeCumparaturiPage);
+        magazinPage = new MagazinPage();
+        PageFactory.initElements(driver, magazinPage);
         searchPage = new SearchPage();
         PageFactory.initElements(driver, searchPage);
         productPage = new ProductPage();
