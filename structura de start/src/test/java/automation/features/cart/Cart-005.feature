@@ -1,6 +1,6 @@
 Feature: Cart-Modify product quantity
 
-  @Tickbird-009 @Automation_Smoke @UI @Cart
+  @Tickbird-009 @Automation_Smoke @UI @Octavian
   Scenario: cart-009-Decrement single product quantity
     Given The user navigates to Home Page
     When  Insert "w${#p2m1iu2%" Password And Click Submit
@@ -12,7 +12,7 @@ Feature: Cart-Modify product quantity
     And The user decrements product quantity and clicks on Actualizeaza cosul
     Then Cart is empty
 
-  @Tickbird-010 @Automation_Smoke @UI @Cart
+  @Tickbird-010 @Automation_Smoke @UI @Octavian
   Scenario: cart-010-Increment single product quantity
     Given The user navigates to Home Page
     When  Insert "w${#p2m1iu2%" Password And Click Submit
