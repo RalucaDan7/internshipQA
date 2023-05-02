@@ -18,6 +18,10 @@ public class BaseTest {
 
     protected LoginPage loginPage;
 
+    protected AccesoriiPage accesoriiPage;
+
+    protected ContactPage contactPage;
+
     protected CosDeCumparaturiPage cosDeCumparaturiPage;
 
     protected MagazinPage magazinPage;
@@ -31,11 +35,14 @@ public class BaseTest {
         PageFactory.initElements(driver, basePage);
         loginPage = new LoginPage();
         PageFactory.initElements(driver, loginPage);
+        accesoriiPage = new AccesoriiPage();
+        PageFactory.initElements(driver, accesoriiPage);
+        contactPage = new ContactPage();
+        PageFactory.initElements(driver, contactPage);
         cosDeCumparaturiPage = new CosDeCumparaturiPage();
         PageFactory.initElements(driver, cosDeCumparaturiPage);
         magazinPage = new MagazinPage();
         PageFactory.initElements(driver, magazinPage);
-
 
     }
 }
