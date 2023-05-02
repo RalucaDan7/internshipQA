@@ -20,9 +20,8 @@ public class BaseTest {
 
     protected AccesoriiPage accesoriiPage;
 
-    protected ContactPage  contactPage;
+    protected ContactPage contactPage;
 
-//    protected AccesoriiDropdPage accesoriiDropdPage;
 
     public void initPages(WebDriver driver) {
 
@@ -36,7 +35,6 @@ public class BaseTest {
         PageFactory.initElements(driver, accesoriiPage);
         contactPage = new ContactPage();
         PageFactory.initElements(driver, contactPage);
-//        accesoriiDropdPage = new AccesoriiDropdPage();
-//        PageFactory.initElements(driver, accesoriiDropdPage);
+
     }
 }
