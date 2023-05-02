@@ -56,7 +56,7 @@ public class HomePageSteps extends BaseTest {
     }
 
     @When("Click on Trimite-ne mesaj button")
-    public void clickOnContactButton() {
+    public void clickOnContactButtonFromHomepage() {
         homePage.clickOnTheContactButton();
     }
     @And("Click on Descopera Colectia from home page")
@@ -65,10 +65,6 @@ public class HomePageSteps extends BaseTest {
     @And("Click On News button from Home page")
     public void clickOnNewsButton(){homePage.clickOnNewsButton();}
 
-    @When("Click on Trimite-ne mesaj button")
-    public void clickOnContactButton() {
-        homePage.clickOnTheContactButton();
-    }
     @When("Click on Trimite-ne mesaj button  using CSS")
     public void clickOnContactButtonCss() {
         homePage.clickOnTheContactButtonCss();

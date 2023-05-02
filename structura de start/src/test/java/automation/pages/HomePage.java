@@ -95,7 +95,7 @@ public class HomePage {
         accesoriiLink.click();
     }
     public void clickOnNewsButton(){newsButton.click();}
-}
+
 
 
     public void clickOnDropdownItem() {
