@@ -49,7 +49,7 @@ public class HomePageSteps extends BaseTest {
     }
 
     @Then("Suggestion has {string} in name")
-    public void checkSuggestionIsCorrect(String pass) {
+    public void checkSearchSuggestionIsCorrect(String pass) {
         homePage.checkSearchSuggestionIsCorrect(pass);
     }
 
