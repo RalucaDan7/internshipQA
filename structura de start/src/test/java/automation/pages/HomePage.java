@@ -30,6 +30,9 @@ public class HomePage {
     @FindBy(xpath = "//h4[@class=\"wd-entities-title\"]")
     private WebElement suggestions;
 
+    @FindBy(xpath = "(//div[@class=\"wrapper-content-banner wd-fill wd-items-bottom wd-justify-center\"])[2]")
+    private WebElement baietiCategory;
+
 
 
     public void checkFavoritesLinkIsVisible() {
@@ -66,5 +69,9 @@ public class HomePage {
 
     public void clickSuggestion() {
         suggestions.click();
+    }
+
+    public void clickBaietiCategory() {
+        baietiCategory.click();
     }
 }

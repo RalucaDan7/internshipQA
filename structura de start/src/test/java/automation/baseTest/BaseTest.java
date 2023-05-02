@@ -22,6 +22,10 @@ public class BaseTest {
 
     protected ProductPage productPage;
 
+    protected CategoryPage categoryPage;
+
+    protected CartPage cartPage;
+
 
     public void initPages(WebDriver driver) {
 
@@ -35,5 +39,9 @@ public class BaseTest {
         PageFactory.initElements(driver, searchPage);
         productPage = new ProductPage();
         PageFactory.initElements(driver, productPage);
+        categoryPage = new CategoryPage();
+        PageFactory.initElements(driver, categoryPage);
+        cartPage = new CartPage();
+        PageFactory.initElements(driver, cartPage);
     }
 }

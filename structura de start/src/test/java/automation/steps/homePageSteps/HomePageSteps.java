@@ -59,4 +59,9 @@ public class HomePageSteps extends BaseTest {
 
         homePage.clickSuggestion();
     }
+
+    @And("The user clicks on Baieti")
+    public void clickBaietiCategory(){
+        homePage.clickBaietiCategory();
+    }
 }
