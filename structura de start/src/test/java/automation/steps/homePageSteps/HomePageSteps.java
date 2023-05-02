@@ -30,11 +30,47 @@ public class HomePageSteps extends BaseTest {
 
     @And("Click On FogotPassword Link")
     public void clickOnForgotPasswordLink(){homePage.clickOnForgotPasswordLink();}
+    @When("Click on Cos de cumparaturi")
+    public void clickOnCosDeCumparaturi() {
+        homePage.clickOnCosDeCumparaturi();
+    }
 
+    @And("Check the sidebar is not displayed")
+    public void checkTheSidebarIsNotDisplayed() {
+        homePage.checkTheSidebarIsNotDisplayed();
+    }
+    @And("Click the  Accesorii button")
+    public void clickOnAccesoriiButton() {
+        homePage.clickOnAccesoriiLink();
+    }
+
+
+    @And("User mouse over the Accesorii dropdown")
+    public void mouseOverAccesorii() {
+        homePage.mouseOverAccesoriiButton();
+    }
+
+    @And("User clicks on Sepci si palarii item")
+    public void clickOnDropDownItem() {
+        homePage.clickOnDropdownItem();
+    }
+
+    @When("Click on Trimite-ne mesaj button")
+    public void clickOnContactButton() {
+        homePage.clickOnTheContactButton();
+    }
     @And("Click on Descopera Colectia from home page")
     public void clickOnDescoperaColectiabutton(){homePage.clickOnDescoperaColectiabutton();}
 
     @And("Click On News button from Home page")
     public void clickOnNewsButton(){homePage.clickOnNewsButton();}
 
+    @When("Click on Trimite-ne mesaj button")
+    public void clickOnContactButton() {
+        homePage.clickOnTheContactButton();
+    }
+    @When("Click on Trimite-ne mesaj button  using CSS")
+    public void clickOnContactButtonCss() {
+        homePage.clickOnTheContactButtonCss();
+    }
 }
