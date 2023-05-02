@@ -15,13 +15,17 @@ public class AccesoriiSteps extends BaseTest {
         accesoriiPage.checkAccesoriiTitle(title);
     }
 
-    @Then ("A dropdown menu containing the following items is displayed")
+    @Then("A dropdown menu containing the following items is displayed")
     public void checkDropdownContentIsDisplayed(DataTable dataTable) {
         List<String> dataL = dataTable.asList(String.class);
-        System.out.println(dataL);
-        for (int i = 0; i<dataL.size(); i++)
-        {
+        for (int i = 0; i < dataL.size(); i++) {
             accesoriiPage.checkAccesoriiElements(dataL.get(i));
         }
     }
+
+    @Then("A page named {string} is displayed")
+    public void checkPageTitleDropdownIsDisplayed(String title) {
+        accesoriiPage.checkDropdownItemTitle(title);
+    }
+
 }

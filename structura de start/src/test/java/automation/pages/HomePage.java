@@ -2,7 +2,6 @@ package automation.pages;
 
 import automation.base.DriverUtil;
 import org.junit.Assert;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.interactions.Actions;
@@ -19,10 +18,10 @@ public class HomePage {
     @FindBy(xpath = "(//a[@class=\"woodmart-nav-link\"])[20]")
     private WebElement accesoriiLink;
 
-    @FindBy(xpath = "(//div[contains(@class,'wd-cookies-inner')])")
+    @FindBy(xpath = "(//a[contains(@href,'/contact/')])")
     private WebElement messageLink;
 
-    @FindBy(css = "div.wd-cookies-inner")
+    @FindBy(css = "a[href='/contact/']")
     private WebElement messageLinkCss;
 
 
@@ -32,6 +31,8 @@ public class HomePage {
     @FindBy(xpath = "(//a[@class=\"woodmart-nav-link\"])[20]")
     private WebElement subAccesoriiLinkMenu;
 
+    @FindBy(xpath = "(//a[@class=\"woodmart-nav-link\"])[24]")
+    private WebElement dropDownItem;
 
     public void checkFavoritesLinkIsVisible() {
         Assert.assertTrue("dashboard link is not visible ", favoritesLink.isDisplayed());
@@ -43,11 +44,11 @@ public class HomePage {
     }
 
 
-    public void mouseOverAccesoriiButton() throws InterruptedException {
+    public void mouseOverAccesoriiButton() {
         Actions action = new Actions(DriverUtil.getDriver());
         action.moveToElement(accesoriiLinkMenu).build().perform();
         action.moveToElement(subAccesoriiLinkMenu).perform();
-        Thread.sleep(1000);
+
 
     }
 
@@ -55,11 +56,15 @@ public class HomePage {
         accesoriiLink.click();
     }
 
+    public void clickOnDropdownItem() {
+        dropDownItem.click();
+    }
+
     public void clickOnTheContactButton() {
         messageLink.click();
     }
-    public void clickOnTheContactButtonCss() {
 
+    public void clickOnTheContactButtonCss() {
         messageLinkCss.click();
     }
 

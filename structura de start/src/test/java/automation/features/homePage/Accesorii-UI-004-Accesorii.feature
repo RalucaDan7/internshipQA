@@ -4,6 +4,6 @@ Feature: Accesorii-UI-Main Page
   Scenario: Accesorii-UI-010-Checking the functionality of Accesorii button
     Given The user navigates to Home Page
     When  Insert "w${#p2m1iu2%" Password And Click Submit
-    When  Click the  Accesorii button
+    And  Click the  Accesorii button
     Then  A page containing "Accesorii" title is displayed
-#      | url | qa-training |
+
