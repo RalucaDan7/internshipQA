@@ -17,7 +17,7 @@ public class HomePage {
     private WebElement cosDeCumparaturiLink;
 
     @FindBy(css = "div[class=\"cart-widget-side wd-side-hidden wd-right\"]")
-    private WebElement cosDeCumparaturiSidebarInchis;
+    private WebElement cosDeCumparaturiSidebarInchisElement;
 
     public void checkFavoritesLinkIsVisible() {
         Assert.assertTrue("dashboard link is not visible ", favoritesLink.isDisplayed());
@@ -32,9 +32,6 @@ public class HomePage {
     }
 
     public void checkTheSidebarIsNotDisplayed() {
-//       Assert.assertTrue("The cos de cumparaturi sidebar is displayed and it should not be",
-//                cosDeCumparaturiSidebarInchis.getAttribute("class").equals("cart-widget-side wd-side-hidden wd-right"));
-
-        Assert.assertEquals(cosDeCumparaturiSidebarInchis.getAttribute("class"), "cart-widget-side wd-side-hidden wd-right");
+        Assert.assertEquals(cosDeCumparaturiSidebarInchisElement.getAttribute("class"), "cart-widget-side wd-side-hidden wd-right");
     }
 }
