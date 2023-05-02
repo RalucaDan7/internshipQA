@@ -4,7 +4,6 @@ import automation.baseTest.BaseTest;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import cucumber.api.java.en_scouse.An;
 
 public class HomePageSteps extends BaseTest {
 
@@ -51,7 +50,7 @@ public class HomePageSteps extends BaseTest {
 
     @Then("Suggestion has {string} in name")
     public void checkSuggestionIsCorrect(String pass) {
-        homePage.checkSuggestionIsCorrect(pass);
+        homePage.checkSearchSuggestionIsCorrect(pass);
     }
 
     @And("Click On Suggestion")

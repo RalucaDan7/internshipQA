@@ -1,6 +1,5 @@
 package automation.pages;
 
-import automation.steps.homePageSteps.HomePageSteps;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,7 +13,7 @@ public class ProductPage {
     private WebElement sizeBox;
 
     @FindBy(xpath = "(//option[@class=\"attached enabled\"])[1]")
-    private WebElement sizeOption;
+    private WebElement selectSizeDropdown;
 
     @FindBy(xpath = "(//button[@type=\"submit\"])[2]")
     private WebElement addToCartButton;
@@ -26,7 +25,7 @@ public class ProductPage {
 
     public void selectSize() {
         sizeBox.click();
-        sizeOption.click();
+        selectSizeDropdown.click();
     }
 
     public void addToCart() {

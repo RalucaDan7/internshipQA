@@ -27,8 +27,9 @@ public class CartSteps extends BaseTest {
         cartPage.incrementProductQuantity();
     }
 
-    @Then("Product quantity is 2")
-    public void checkProductQuantity(){
-        cartPage.checkProductQuantity();
+    @Then("Product quantity is {string}")
+    public void checkProductQuantity(String pass){
+
+        cartPage.checkProductQuantity(pass);
     }
 }

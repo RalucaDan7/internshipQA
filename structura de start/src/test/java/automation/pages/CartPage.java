@@ -4,8 +4,6 @@ import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.Optional;
-
 public class CartPage {
 
     @FindBy(xpath = "//a[@class=\"button btn-cart wc-forward\"]")
@@ -24,7 +22,7 @@ public class CartPage {
     private WebElement emptyCartImage;
 
     @FindBy(xpath = "//input[@title=\"Cantitate\"]")
-    private WebElement productQuantity;
+    private WebElement productQuantityElement;
 
 
     public void goToCart() {
@@ -45,7 +43,7 @@ public class CartPage {
         updateCartButton.click();
     }
 
-    public void checkProductQuantity() {
-        Assert.assertTrue("Product quantity did not increase", productQuantity.getText().contains("2"));
+    public void checkProductQuantity(String pass) {
+        Assert.assertTrue("Product quantity did not increase", productQuantityElement.getText().contains(pass));
     }
 }

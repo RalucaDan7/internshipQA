@@ -22,4 +22,4 @@ Feature: Cart-Modify product quantity
     And The user clicks on Adauga in cos
     And The user clicks on Vezi cosul
     And The user increments product quantity and clicks on Actualizeaza cosul
-    Then Product quantity is 2
+    Then Product quantity is "2"

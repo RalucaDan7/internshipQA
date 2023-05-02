@@ -28,10 +28,10 @@ public class HomePage {
     private WebElement suggestionBox;
 
     @FindBy(xpath = "//h4[@class=\"wd-entities-title\"]")
-    private WebElement suggestions;
+    private WebElement suggestionsDropdown;
 
     @FindBy(xpath = "(//div[@class=\"wrapper-content-banner wd-fill wd-items-bottom wd-justify-center\"])[2]")
-    private WebElement baietiCategory;
+    private WebElement baietiCategoryButton;
 
 
 
@@ -63,15 +63,15 @@ public class HomePage {
         Assert.assertTrue("suggestion box is not displayed", suggestionBox.isDisplayed());
     }
 
-    public void checkSuggestionIsCorrect(String pass) {
-        Assert.assertTrue("Suggestion is not correct", suggestions.getText().toLowerCase().contains(pass.toLowerCase()));
+    public void checkSearchSuggestionIsCorrect(String pass) {
+        Assert.assertTrue("Search suggestion doesn't show products related to \"" + pass + "\"", suggestionsDropdown.getText().toLowerCase().contains(pass.toLowerCase()));
     }
 
     public void clickSuggestion() {
-        suggestions.click();
+        suggestionsDropdown.click();
     }
 
     public void clickBaietiCategory() {
-        baietiCategory.click();
+        baietiCategoryButton.click();
     }
 }
