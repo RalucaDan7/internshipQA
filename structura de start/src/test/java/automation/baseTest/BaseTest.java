@@ -33,6 +33,8 @@ public class BaseTest {
     protected CosDeCumparaturiPage cosDeCumparaturiPage;
 
     protected MagazinPage magazinPage;
+    protected SepciPage  sepciPage;
+    protected ProductFetePage productFetePage;
 
     public void initPages(WebDriver driver) {
 
@@ -58,5 +60,9 @@ public class BaseTest {
         PageFactory.initElements(driver, categoryPage);
         cartPage = new CartPage();
         PageFactory.initElements(driver, cartPage);
+        sepciPage= new SepciPage();
+        PageFactory.initElements(driver, sepciPage);
+        productFetePage= new ProductFetePage();
+        PageFactory.initElements(driver, productFetePage);
     }
 }

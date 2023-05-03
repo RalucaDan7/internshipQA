@@ -27,6 +27,8 @@ public class AccesoriiPage {
     @FindBy(css = "h1[class='entry-title title']")
     private WebElement SepciPageTitle;
 
+
+
     public void checkAccesoriiTitle(String nume) {
         Assert.assertEquals("The title from Accesorii page  is not correct ", nume, accesoriiTitle.getText());
     }
