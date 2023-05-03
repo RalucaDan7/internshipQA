@@ -1,9 +1,12 @@
-package automation.steps;
+package automation.steps.octavian_steps;
 
 import automation.baseTest.BaseTest;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en_scouse.An;
+import io.cucumber.datatable.DataTable;
+
+import java.util.List;
 
 public class CartSteps extends BaseTest {
 
@@ -31,5 +34,17 @@ public class CartSteps extends BaseTest {
     public void checkProductQuantity(String pass){
 
         cartPage.checkProductQuantity(pass);
+    }
+
+    @Then("The following products should be in the cart")
+    public void checkProductsInCart(DataTable dataTable){
+        List<String> data = dataTable.asList(String.class);
+        cartPage.checkProductsInCart(data);
+    }
+
+    @Then("The following products should be in the cart by looping list of WebElements")
+    public void checkProductsInCartByLoopingWebElements(DataTable dataTable){
+        List<String> data = dataTable.asList(String.class);
+        cartPage.checkProductsInCartByLoopingWebElements(data);
     }
 }

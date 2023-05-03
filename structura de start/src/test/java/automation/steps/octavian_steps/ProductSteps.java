@@ -1,10 +1,6 @@
-package automation.steps;
+package automation.steps.octavian_steps;
 
 import automation.baseTest.BaseTest;
-import automation.pages.ProductPage;
-import automation.pages.SearchPage;
-import automation.steps.homePageSteps.HomePageSteps;
-import cucumber.api.java.bs.A;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 
