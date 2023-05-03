@@ -12,4 +12,4 @@ Feature: Noutati-UI-Main Page
     Given The user navigates to Home Page
     When  Insert "w${#p2m1iu2%" Password And Click Submit
     When Click on Noutati Button
-    Then Check title "Noutati fete" is visible on page Noutati
+    Then Check title "Noutati fete" is visible by xpath on page Noutati
