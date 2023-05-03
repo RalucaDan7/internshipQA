@@ -4,6 +4,7 @@ import automation.base.DriverUtil;
 import automation.baseTest.BaseTest;
 import automation.common.Constants;
 import automation.common.WaitUtils;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -15,13 +16,18 @@ public class BluzeSiHanoraceFeteSteps extends BaseTest {
         WaitUtils.waitForPageToLoad();
     }
 
-    @When("Click on Bluza cu volane pentru fete")
+    @Then("Check Bluza cu volane pentru fete is displayed")
+    public void checkBluzaCuVolanePentruFete() {
+        bluzeSiHanoraceFetePage.checkBluzaCuVolanePentruFeteIsDisplayed();
+    }
+
+    @Then("Click on Bluza cu volane pentru fete")
     public void clickOnBluzaCuVolanePentruFete() {
         bluzeSiHanoraceFetePage.clickOnBluzaCuVolanePentruFete();
     }
 
-    @Then("{string} is displayed on the page with the individual product")
-    public void checkProductTitleIsDisplayed(String productTitle) {
-        bluzeSiHanoraceFetePage.checkProductTitle(productTitle);
+    @And("{string} is displayed on the page with the individual product")
+    public void checkProductTitleIsDisplayed(String title) {
+        bluzeSiHanoraceFetePage.checkProductTitle(title);
     }
 }
