@@ -7,12 +7,12 @@ Feature: SepciSiPalariiPage-UI-Check functionality of page items
     And   User clicks on Sepci si palarii item
 
 
-#  @Tickbird-012 @Automation_Smoke @UI @Adriana
-# Scenario: Sepci-UI-012-Check the "Prima pagina" link is functional
-#
-#    And   User clicks on the Prima pagina item
-#    Then  Check "qa-training" page is displayed
-#      | url | qa-training |
+  @Tickbird-012 @Automation_Smoke @UI @Adriana
+ Scenario: Sepci-UI-012-Check the "Prima pagina" link is functional
+
+    And   User clicks on the Prima pagina item
+    Then  Check "qa-training" page is displayed
+      | url | qa-training |
 
   @Tickbird-013 @Automation_Smoke @UI @Adriana
   Scenario: Sepci-UI-013-Check the flow for purchasing in item from Fete page

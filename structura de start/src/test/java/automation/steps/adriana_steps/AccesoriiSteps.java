@@ -1,4 +1,4 @@
-package automation.steps;
+package automation.steps.adriana_steps;
 
 
 import automation.baseTest.BaseTest;
@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class AccesoriiSteps extends BaseTest {
 
-    @Then("A page containing {string} title is displayed")
+    @Then("A page containing {string} name is displayed")
     public void checkPageTitleIsDisplayed(String title) {
         accesoriiPage.checkAccesoriiTitle(title);
     }

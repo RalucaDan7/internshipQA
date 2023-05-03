@@ -1,4 +1,4 @@
-package automation.pages;
+package automation.pages.adriana_pages;
 
 import automation.base.DriverUtil;
 import automation.base.WebDriverUtil;

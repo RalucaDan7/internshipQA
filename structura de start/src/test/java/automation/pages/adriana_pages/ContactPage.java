@@ -1,4 +1,4 @@
-package automation.pages;
+package automation.pages.adriana_pages;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;

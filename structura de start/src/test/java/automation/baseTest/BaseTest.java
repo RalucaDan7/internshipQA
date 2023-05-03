@@ -3,6 +3,10 @@ package automation.baseTest;
 
 import automation.pages.*;
 import automation.base.DriverUtil;
+import automation.pages.adriana_pages.AccesoriiPage;
+import automation.pages.adriana_pages.ContactPage;
+import automation.pages.adriana_pages.ProductFetePage;
+import automation.pages.adriana_pages.SepciPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -33,7 +37,7 @@ public class BaseTest {
     protected CosDeCumparaturiPage cosDeCumparaturiPage;
 
     protected MagazinPage magazinPage;
-    protected SepciPage  sepciPage;
+    protected SepciPage sepciPage;
     protected ProductFetePage productFetePage;
 
     public void initPages(WebDriver driver) {
