@@ -77,5 +77,6 @@ public class CartPage {
     public void checkProductsInCartKeyTable(Map<String, String> dataMap) {
         WaitUtils.waitForPageToLoad();
         Assert.assertTrue("Product \""+ dataMap.get("product1") +"\" is not in the cart.", cartProductsList.stream().map(WebElement::getText).collect(Collectors.joining(", ")).contains(dataMap.get("product1")));
+        Assert.assertTrue("Product \""+ dataMap.get("product2") +"\" is not in the cart.", cartProductsList.stream().map(WebElement::getText).collect(Collectors.joining(", ")).contains(dataMap.get("product2")));
     }
 }
