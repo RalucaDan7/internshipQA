@@ -1,4 +1,4 @@
-package automation.pages;
+package automation.pages.TecsaPages;
 
 import automation.base.DriverUtil;
 import org.junit.Assert;
@@ -17,15 +17,15 @@ public class NewsPage {
     private WebElement filtreazaButton;
 
 
-    public void checkPageIsDisplayed(String pageName, String url) {
-        Assert.assertTrue("The URL of " + pageName + " is not correct", DriverUtil.getDriver().getCurrentUrl().contains(url));
+    public void checkPageIsDisplayed(String url) {
+        Assert.assertTrue("The URL of Noutati-fete page is not correct", DriverUtil.getDriver().getCurrentUrl().contains(url));
     }
 
     public void clickOnBrandFilter(){
         brandFilter.click();
     }
 
-    public void clickOnCalvinKleinJeansOption(){
+    public void selectCalvinKleinJeansOption(){
         calvinKleinOption.click();
     }
 

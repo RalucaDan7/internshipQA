@@ -1,4 +1,4 @@
-package automation.pages;
+package automation.pages.TecsaPages;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;

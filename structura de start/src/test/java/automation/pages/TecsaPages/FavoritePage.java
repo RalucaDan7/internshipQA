@@ -1,4 +1,4 @@
-package automation.pages;
+package automation.pages.TecsaPages;
 
 import automation.base.DriverUtil;
 import automation.baseTest.BaseTest;

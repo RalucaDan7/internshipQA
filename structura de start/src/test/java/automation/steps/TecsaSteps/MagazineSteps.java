@@ -1,4 +1,4 @@
-package automation.steps;
+package automation.steps.TecsaSteps;
 
 import automation.baseTest.BaseTest;
 import cucumber.api.java.en.And;

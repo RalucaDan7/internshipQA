@@ -3,6 +3,7 @@ package automation.baseTest;
 
 import automation.pages.*;
 import automation.base.DriverUtil;
+import automation.pages.TecsaPages.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -38,6 +39,8 @@ public class BaseTest {
 
     protected MagazinPage magazinPage;
 
+    protected BasketPage basketPage;
+
 
 
     public void initPages(WebDriver driver) {
@@ -68,6 +71,8 @@ public class BaseTest {
         PageFactory.initElements(driver, cosDeCumparaturiPage);
         magazinPage = new MagazinPage();
         PageFactory.initElements(driver, magazinPage);
+        basketPage = new BasketPage();
+        PageFactory.initElements(driver, basketPage);
 
     }
 }
