@@ -19,4 +19,9 @@ public class SepciPage {
         feteLink.click();
     }
 
+    @FindBy(css="div[class=\"wd-pf-checkboxes wd-pf-attributes wd-col wd-event-click\"]")
+    private WebElement marimeDropdown;
+    public void clickOnTheMarimeButton() {
+        marimeDropdown.click();
+    }
 }

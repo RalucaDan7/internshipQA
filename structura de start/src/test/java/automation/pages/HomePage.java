@@ -123,7 +123,7 @@ public class HomePage {
     }
 
 
-    public void clickOnDropdownItem() {
+    public void clickOnAccesoriiDropdownItem() {
         dropDownItem.click();
     }
 

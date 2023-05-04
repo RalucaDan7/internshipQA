@@ -8,10 +8,15 @@ public class SepciSteps extends BaseTest {
     public void clickOnPrimaPaginaLink() {
         sepciPage.clickOnThePrimaPaginaLink();
     }
-        @And("User clicks on Fete item")
-        public void clickOnFeteLink() {
-            sepciPage.clickOnTheFeteLink();
 
-        }
+    @And("User clicks on Fete item")
+    public void clickOnFeteLink() {
+        sepciPage.clickOnTheFeteLink();
+
     }
+    @And("User clicks on Marime dropdown button")
+    public void clickOnMarimeFilterDropdwon() {
+        sepciPage.clickOnTheMarimeButton();
+        }
+}
 

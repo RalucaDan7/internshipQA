@@ -15,7 +15,7 @@ public class ProductFeteSteps extends BaseTest {
     }
 
     @And("User clicks on the Add to basket button without selecting any size")
-    public void addToBasket() {
+    public void addToBasket() throws InterruptedException {
         productFetePage.addToBasketButton();
     }
 
