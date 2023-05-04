@@ -24,8 +24,12 @@ public class ProductFetePage {
         productName.click();
     }
 
-    public void addToBasketButton() throws InterruptedException {
-
+    public void addToBasketButton()  {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         addToCart.click();
 
     }
