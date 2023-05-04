@@ -1,4 +1,4 @@
-package automation.steps;
+package automation.steps.octavian_steps;
 
 import automation.baseTest.BaseTest;
 import cucumber.api.java.en.And;
