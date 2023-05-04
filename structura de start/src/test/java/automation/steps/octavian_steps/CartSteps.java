@@ -7,6 +7,7 @@ import cucumber.api.java.en_scouse.An;
 import io.cucumber.datatable.DataTable;
 
 import java.util.List;
+import java.util.Map;
 
 public class CartSteps extends BaseTest {
 
@@ -46,5 +47,11 @@ public class CartSteps extends BaseTest {
     public void checkProductsInCartByLoopingWebElements(DataTable dataTable){
         List<String> data = dataTable.asList(String.class);
         cartPage.checkProductsInCartByLoopingWebElements(data);
+    }
+
+    @Then("The following products should be in the cart by key table")
+    public void checkProductsInCartKeyTable(DataTable data){
+        Map<String, String> dataMap = data.asMap(String.class, String.class);
+        cartPage.checkProductsInCartKeyTable(dataMap);
     }
 }

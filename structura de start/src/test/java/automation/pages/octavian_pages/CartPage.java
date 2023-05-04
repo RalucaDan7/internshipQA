@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class CartPage {
@@ -71,5 +72,10 @@ public class CartPage {
         for (int i = 0; i < cartProductsList.size(); i++){
             Assert.assertTrue("Product \""+ data.get(i) +"\" is not in the cart.", cartProductsList.get(i).getText().contains(data.get(i)));
         }
+    }
+
+    public void checkProductsInCartKeyTable(Map<String, String> dataMap) {
+        WaitUtils.waitForPageToLoad();
+        Assert.assertTrue("Product \""+ dataMap.get("product1") +"\" is not in the cart.", cartProductsList.stream().map(WebElement::getText).collect(Collectors.joining(", ")).contains(dataMap.get("product1")));
     }
 }

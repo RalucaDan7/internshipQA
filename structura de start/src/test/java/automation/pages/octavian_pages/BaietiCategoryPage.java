@@ -22,7 +22,4 @@ public class BaietiCategoryPage {
     public void clickSecondProduct() {
         secondProductElement.click();
     }
-
-    public void clickOnProduct(String pass) {
-    }
 }
