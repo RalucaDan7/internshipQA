@@ -12,8 +12,13 @@ public class ProductSteps extends BaseTest {
     }
 
     @And("The user selects a size")
-    public void selectSize(){
-        productPage.selectSize();
+    public void selectFirstSize(){
+        productPage.selectFirstSize();
+    }
+
+    @And("The user selects {string} size")
+    public void selectSize(String pass){
+        productPage.selectSize(pass);
     }
 
     @And("The user clicks on Adauga in cos")

@@ -33,11 +33,11 @@ Feature: Cart-Check items in cart
   @Tickbird-013 @Automation_Smoke @UI @Octavian
   Scenario: cart-013-Check items are added to cart by key table
     And The user clicks on first product
-    And The user selects a size
+    And The user selects "140" size
     And The user clicks on Adauga in cos
     And The user navigates back
     And The user clicks on second product
-    And The user selects a size
+    And The user selects "140" size
     And The user clicks on Adauga in cos
     Then The following products should be in the cart by key table
       | product1 | Blugi regular fit pentru baieti    |
