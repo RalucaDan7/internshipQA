@@ -35,5 +35,13 @@ public class SepciSteps extends BaseTest {
     public void checkTheFiltersAreCleared() {
         sepciPage.checkIfTheFiltersAreCleared();
     }
+    @And("User clicks on Sapca de baseball pentru copii product")
+    public void clickOnSapcaDeBaseballItem() {
+        sepciPage.clickOnSapcaDeBasebal();
+    }
+    @And("User clicks on Wishlist icon")
+    public void clickOnWishlistButton(){
+        sepciPage.clicksOnWishlistButton();
+    }
 }
 

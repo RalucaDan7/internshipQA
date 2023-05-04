@@ -22,6 +22,12 @@ public class SepciPage {
     @FindBy(xpath = ("//div[@class=\"wd-clear-filters wd-action-btn wd-style-text wd-cross-icon\"]"))
     private WebElement resetareFiltreLink;
 
+    @FindBy(css = "a>img[class=\"attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-image-13940\"]")
+    private WebElement sepciProductLink;
+
+    @FindBy(xpath = ("//div[@class='wd-wishlist-btn wd-action-btn wd-style-text wd-wishlist-icon']//a"))
+    private WebElement wishlistButton;
+
     public void clickOnThePrimaPaginaLink() {
         primaPaginaLink.click();
     }
@@ -45,5 +51,17 @@ public class SepciPage {
     public void checkIfTheFiltersAreCleared() {
         Assert.assertFalse("Filter element was not cleared", resetareFiltreLink.isSelected());
 
+    }
+    public void clickOnSapcaDeBasebal(){
+        sepciProductLink.click();
+    }
+    public void clicksOnWishlistButton(){
+
+        wishlistButton.click();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
