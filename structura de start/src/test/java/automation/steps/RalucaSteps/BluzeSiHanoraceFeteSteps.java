@@ -20,6 +20,12 @@ public class BluzeSiHanoraceFeteSteps extends BaseTest {
         bluzeSiHanoraceFetePage.checkBluzaCuVolanePentruFeteIsDisplayed();
     }
 
+    @Then("Check {string} from Bluze si Hanorace Page are displayed")
+    public void checkDisplayedProducts(String product) {
+        bluzeSiHanoraceFetePage.checkDisplayedProducts(product);
+    }
+
+
     @Then("Click on Bluza cu volane pentru fete")
     public void clickOnBluzaCuVolanePentruFete() {
         bluzeSiHanoraceFetePage.clickOnBluzaCuVolanePentruFete();

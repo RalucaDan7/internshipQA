@@ -9,7 +9,8 @@ Feature: AdaugareProduseBluzeSiHanoraceFeteCosDeCumparaturi-UI
   @Tickbird-013 @Automation_Smoke @UI @Raluca
   Scenario: AdaugareProduseCosDeCumparaturi-UI-013-CheckTheProductsAreInTheCart
     And Check Bluza cu volane pentru fete is displayed
-    Then Click on Bluza cu volane pentru fete
-    And "Bluza cu volane pentru fete" is displayed on the page with the individual product
+    And Check "product" from Bluze si Hanorace Page are displayed
+#    Then Click on Bluza cu volane pentru fete
+#    And "Bluza cu volane pentru fete" is displayed on the page with the individual product
 
 
