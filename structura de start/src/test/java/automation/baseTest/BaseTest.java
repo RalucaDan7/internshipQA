@@ -2,6 +2,7 @@ package automation.baseTest;
 
 
 import automation.pages.BasePage;
+import automation.pages.Daniel.pages.RezultateRochiePage;
 import automation.pages.HomePage;
 import automation.base.DriverUtil;
 import automation.pages.LoginPage;
@@ -23,6 +24,8 @@ public class BaseTest {
 
     protected NoutatiPage noutatiPage;
 
+    protected RezultateRochiePage rezultateRochiePage;
+
     public void initPages(WebDriver driver) {
 
         homePage = new HomePage();
@@ -33,5 +36,7 @@ public class BaseTest {
         PageFactory.initElements(driver, loginPage);
         noutatiPage = new NoutatiPage();
         PageFactory.initElements(driver, noutatiPage);
+        rezultateRochiePage = new RezultateRochiePage();
+        PageFactory.initElements(driver, rezultateRochiePage);
     }
 }

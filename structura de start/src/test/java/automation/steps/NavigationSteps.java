@@ -33,4 +33,5 @@ public class NavigationSteps extends BaseTest {
         WaitUtils.waitForPageToLoad();
     }
 
+
 }

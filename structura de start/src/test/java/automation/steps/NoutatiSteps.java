@@ -15,5 +15,6 @@ public class NoutatiSteps extends BaseTest {
 
     @Then("Check title {string} is visible by xpath on page Noutati")
     public void checkTitleIsVisibleByXpathOnPageNoutati(String arg0) {
+        noutatiPage.checkNoutatiFeteIsVisibleByXpath(arg0);
     }
 }

@@ -21,8 +21,13 @@ public class NoutatiPage {
         Assert.assertTrue("The title is visible on Noutati page ", noutatiFeteTitleByXpath.getText().equals(numelecarevinedinfeature));
     }
 
-    public void checkPageIsDisplayed(String pageName, String url) {
+    public void checkNoutatiFeteIsVisibleByCss(String pageName, String url) {
         Assert.assertTrue("The title of " + pageName + " is not correct", DriverUtil.getDriver().getCurrentUrl().contains(url));
+
+
+    }
+    public void checkNoutatiFeteIsVisibleByXpath(String daniel) {
+        noutatiFeteTitleByXpath.getAttribute("class");
 
     }
 }
