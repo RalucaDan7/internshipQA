@@ -60,6 +60,9 @@ public class HomePage {
     @FindBy(css = "div[class=\"cart-widget-side wd-side-hidden wd-right\"]")
     private WebElement cosDeCumparaturiSidebarInchisElement;
 
+    @FindBy(xpath = "//div[@class=\"cookies-buttons\"]")
+    private WebElement acceptCookiesButton;
+
     public void checkFavoritesLinkIsVisible() {
         Assert.assertTrue("dashboard link is not visible ", favoritesLink.isDisplayed());
     }
@@ -132,5 +135,8 @@ public class HomePage {
         messageLinkCss.click();
     }
 
+    public void acceptCookies() {
+        acceptCookiesButton.click();
+    }
 }
 

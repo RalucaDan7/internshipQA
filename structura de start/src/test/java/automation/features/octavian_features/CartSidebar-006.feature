@@ -3,6 +3,7 @@ Feature: Cart-Check items in cart
   Background:
     Given The user navigates to Baieti Category Page
     When  Insert "w${#p2m1iu2%" Password And Click Submit
+#    And Accepts cookies
 
   @Tickbird-011 @Automation_Smoke @UI @Octavian
   Scenario: cart-011-Check items are added to cart
@@ -55,4 +56,8 @@ Feature: Cart-Check items in cart
     Then The following products should be in the cart by key table
       | product1 | Pantaloni din bumbac pentru copii  |
       | product2 | Bluza polo din bumbac pentru copii |
+
+  @Tickbird-015 @Automation_Smoke @UI @Octavian
+  Scenario: cart-015-Check item price
+    Then User checks price of "Hanorac cu gluga pentru copii"
 

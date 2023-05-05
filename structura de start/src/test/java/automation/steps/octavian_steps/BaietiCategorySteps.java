@@ -2,6 +2,7 @@ package automation.steps.octavian_steps;
 
 import automation.baseTest.BaseTest;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
 
 public class BaietiCategorySteps extends BaseTest {
 
@@ -19,6 +20,11 @@ public class BaietiCategorySteps extends BaseTest {
     @And("The user clicks on {string} product")
     public void clickOnGivenProduct(String pass){
         baietiCategoryPage.clickOnGivenProduct(pass);
+    }
+
+    @Then("User checks price of {string}")
+    public void checkPrice(String pass){
+        baietiCategoryPage.checkPrice(pass);
     }
 
 
