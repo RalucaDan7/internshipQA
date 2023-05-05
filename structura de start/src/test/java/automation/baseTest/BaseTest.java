@@ -6,6 +6,13 @@ import automation.base.DriverUtil;
 import automation.pages.TecsaPages.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import automation.pages.octavian_pages.BaietiCategoryPage;
+import automation.pages.octavian_pages.CartPage;
+import automation.pages.octavian_pages.ProductPage;
+import automation.pages.octavian_pages.SearchPage;
+import automation.pages.adriana_pages.*;
+import automation.pages.RalucaPage.BluzeSiHanoraceFetePage;
+import automation.pages.RalucaPage.CostumeDeBaieFetePage;
 
 
 public class BaseTest {
@@ -29,6 +36,15 @@ public class BaseTest {
 
     protected NewsPage newsPage;
 
+    protected SearchPage searchPage;
+
+    protected ProductPage productPage;
+
+    protected BaietiCategoryPage baietiCategoryPage;
+
+    protected CartPage cartPage;
+
+
     protected MagazinePage magazinePage;
 
     protected AccesoriiPage accesoriiPage;
@@ -40,6 +56,14 @@ public class BaseTest {
     protected MagazinPage magazinPage;
 
     protected BasketPage basketPage;
+
+    protected SepciPage sepciPage;
+    protected ProductFetePage productFetePage;
+
+    protected WishlistPage wishlistPage;
+    protected BluzeSiHanoraceFetePage bluzeSiHanoraceFetePage;
+
+    protected CostumeDeBaieFetePage costumeDeBaieFetePage;
 
 
 
@@ -73,6 +97,24 @@ public class BaseTest {
         PageFactory.initElements(driver, magazinPage);
         basketPage = new BasketPage();
         PageFactory.initElements(driver, basketPage);
+        searchPage = new SearchPage();
+        PageFactory.initElements(driver, searchPage);
+        productPage = new ProductPage();
+        PageFactory.initElements(driver, productPage);
+        baietiCategoryPage = new BaietiCategoryPage();
+        PageFactory.initElements(driver, baietiCategoryPage);
+        cartPage = new CartPage();
+        PageFactory.initElements(driver, cartPage);
+        sepciPage= new SepciPage();
+        PageFactory.initElements(driver, sepciPage);
+        productFetePage= new ProductFetePage();
+        PageFactory.initElements(driver, productFetePage);
+        wishlistPage = new WishlistPage();
+        PageFactory.initElements(driver, wishlistPage);
+        bluzeSiHanoraceFetePage = new BluzeSiHanoraceFetePage();
+        PageFactory.initElements(driver, bluzeSiHanoraceFetePage);
+        costumeDeBaieFetePage = new CostumeDeBaieFetePage();
+        PageFactory.initElements(driver, cosDeCumparaturiPage);
 
     }
 }
