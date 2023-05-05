@@ -53,9 +53,7 @@ public class BaietiCategoryPage {
         for (WebElement element : productsDivList){
             if (element.getText().contains(pass)){
                 System.out.println("Price of: \"" + pass + "\" is: " + element.findElement(By.xpath(".//span[@class='price']")).getText());
-//                System.out.println(element.findElement(By.xpath(".//span[@class='woocommerce-Price-amount amount']")).getText());
             }
-//            System.out.println(element.findElement(By.xpath(".//span[@class='price']")).getText());
         }
     }
 }
