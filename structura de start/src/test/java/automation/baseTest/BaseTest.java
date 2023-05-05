@@ -3,6 +3,10 @@ package automation.baseTest;
 
 import automation.pages.*;
 import automation.base.DriverUtil;
+import automation.pages.octavian_pages.BaietiCategoryPage;
+import automation.pages.octavian_pages.CartPage;
+import automation.pages.octavian_pages.ProductPage;
+import automation.pages.octavian_pages.SearchPage;
 import automation.pages.adriana_pages.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -23,7 +27,7 @@ public class BaseTest {
 
     protected ProductPage productPage;
 
-    protected CategoryPage categoryPage;
+    protected BaietiCategoryPage baietiCategoryPage;
 
     protected CartPage cartPage;
 
@@ -59,8 +63,8 @@ public class BaseTest {
         PageFactory.initElements(driver, searchPage);
         productPage = new ProductPage();
         PageFactory.initElements(driver, productPage);
-        categoryPage = new CategoryPage();
-        PageFactory.initElements(driver, categoryPage);
+        baietiCategoryPage = new BaietiCategoryPage();
+        PageFactory.initElements(driver, baietiCategoryPage);
         cartPage = new CartPage();
         PageFactory.initElements(driver, cartPage);
         sepciPage= new SepciPage();
