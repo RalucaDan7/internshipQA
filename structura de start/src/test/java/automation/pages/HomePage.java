@@ -15,6 +15,27 @@ public class HomePage {
     @FindBy(xpath = "(//div[@title=\"Lista mea de dorințe\"])[1]")
     private WebElement favoritesLink;
 
+    @FindBy(xpath = "(//input[@title=\"Cauta produse\"])[1]")
+    private WebElement searchBox;
+
+    @FindBy(xpath = "(//button[@type=\"submit\"])[1]")
+    private WebElement searchButton;
+
+    @FindBy(css = "input[title=\"Cauta produse\"]:nth-of-type(1)")
+    private WebElement searchBoxCSS;
+
+    @FindBy(css = "button[class=\"searchsubmit\"]:nth-of-type(1)")
+    private WebElement searchButtonCSS;
+
+    @FindBy(xpath = "//div[@class=\"wd-dropdown-results wd-scroll wd-dropdown wd-opened\"]")
+    private WebElement suggestionBox;
+
+    @FindBy(xpath = "//h4[@class=\"wd-entities-title\"]")
+    private WebElement suggestionsDropdown;
+
+    @FindBy(xpath = "(//div[@class=\"wrapper-content-banner wd-fill wd-items-bottom wd-justify-center\"])[2]")
+    private WebElement baietiCategoryButton;
+
     @FindBy(css = "a[title=\"Cos de cumparaturi\"]")
     private WebElement cosDeCumparaturiLink;
 
@@ -26,7 +47,6 @@ public class HomePage {
 
     @FindBy(css = "a[href='/contact/']")
     private WebElement messageLinkCss;
-
 
     @FindBy(css = "li[id=\"menu-item-10614\"]")
     private WebElement accesoriiLinkMenu;
@@ -40,6 +60,9 @@ public class HomePage {
     @FindBy(css = "div[class=\"cart-widget-side wd-side-hidden wd-right\"]")
     private WebElement cosDeCumparaturiSidebarInchisElement;
 
+//    @FindBy (css= "nav>a[class=\"breadcrumb-link\"]:nth-child(1)")
+//    private WebElement primaPaginaLink;
+
     public void checkFavoritesLinkIsVisible() {
         Assert.assertTrue("dashboard link is not visible ", favoritesLink.isDisplayed());
     }
@@ -47,6 +70,37 @@ public class HomePage {
 
     public void clickOnMyAccountButton() {
         myAccountButton.click();
+    }
+    public void insertKeywordInSearchBox(String pass) {
+        searchBox.sendKeys(pass);
+    }
+
+    public void clickSearch(){
+        searchButton.click();
+    }
+
+    public void insertKeywordInSearchBoxCSS(String pass) {
+        searchBoxCSS.sendKeys(pass);
+    }
+
+    public void clickSearchCSS(){
+        searchButtonCSS.click();
+    }
+
+    public void checkSugestionBoxIsDisplayed() {
+        Assert.assertTrue("suggestion box is not displayed", suggestionBox.isDisplayed());
+    }
+
+    public void checkSearchSuggestionIsCorrect(String pass) {
+        Assert.assertTrue("Search suggestion doesn't show products related to \"" + pass + "\"", suggestionsDropdown.getText().toLowerCase().contains(pass.toLowerCase()));
+    }
+
+    public void clickSuggestion() {
+        suggestionsDropdown.click();
+    }
+
+    public void clickBaietiCategory() {
+        baietiCategoryButton.click();
     }
 
     public void clickOnCosDeCumparaturi() {
@@ -69,7 +123,7 @@ public class HomePage {
     }
 
 
-    public void clickOnDropdownItem() {
+    public void clickOnAccesoriiDropdownItem() {
         dropDownItem.click();
     }
 
@@ -80,6 +134,8 @@ public class HomePage {
     public void clickOnTheContactButtonCss() {
         messageLinkCss.click();
     }
+
+
 
 }
 
