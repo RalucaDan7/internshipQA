@@ -17,8 +17,10 @@ public class BluzeSiHanoraceFetePage {
     private WebElement bluzaJanePentruFeteText;
     @FindBy(xpath = "(//a[@href=\"https://qa-training.co.in/produs/hanorac-multicolor-bumbac-pentru-copii/\"])[5]")
     private WebElement hanoracMulticolorBumbacPentruCopiiText;
-    @FindBy(xpath = "(//a[@href=\"https://qa-training.co.in/produs/hanorac-namina-pentru-fete/\"])[5]")
+    @FindBy(xpath="(//a[@href=\"https://qa-training.co.in/produs/hanorac-namina-pentru-fete/\"])[5]")
     private WebElement hanoracNaminaPentruFeteText;
+    @FindBy(xpath = "h3.wd-entities-title a")
+    private List <WebElement> bluzeSiHanoraceList;
 
     @FindBy(xpath = "(//a[@class='product-image-link'])[1]")
     private WebElement bluzaCuVolanePentruFeteImage;
@@ -42,21 +44,13 @@ public class BluzeSiHanoraceFetePage {
     }
 
 
-
-
     public void clickOnBluzaCuVolanePentruFete() {
         JavascriptExecutor js = (JavascriptExecutor) DriverUtil.getDriver();
         js.executeScript("arguments[0].scrollIntoView();", bluzaCuVolanePentruFeteImage);
-        Actions action = new Actions(DriverUtil.getDriver());
-        action.moveToElement(bluzaCuVolanePentruFeteImage).click().build().perform();
-
-
-
+        js.executeScript("arguments[0].click();", bluzaCuVolanePentruFeteImage);
     }
 
     public void checkProductTitle(String title) {
-        JavascriptExecutor js = (JavascriptExecutor) DriverUtil.getDriver();
-        js.executeScript("arguments[0].scrollIntoView();", productTitle);
         Assert.assertEquals("The title from" + title + "is not correct ", title, productTitle.getText());
     }
 }

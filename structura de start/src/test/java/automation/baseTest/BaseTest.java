@@ -4,6 +4,7 @@ package automation.baseTest;
 import automation.pages.*;
 import automation.base.DriverUtil;
 import automation.pages.RalucaPage.BluzeSiHanoraceFetePage;
+import automation.pages.RalucaPage.CostumeDeBaieFetePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -29,6 +30,8 @@ public class BaseTest {
 
     protected BluzeSiHanoraceFetePage bluzeSiHanoraceFetePage;
 
+    protected CostumeDeBaieFetePage costumeDeBaieFetePage;
+
 
     public void initPages(WebDriver driver) {
 
@@ -48,6 +51,8 @@ public class BaseTest {
         PageFactory.initElements(driver, magazinPage);
         bluzeSiHanoraceFetePage = new BluzeSiHanoraceFetePage();
         PageFactory.initElements(driver, bluzeSiHanoraceFetePage);
+        costumeDeBaieFetePage = new CostumeDeBaieFetePage();
+        PageFactory.initElements(driver, cosDeCumparaturiPage);
 
     }
 }
