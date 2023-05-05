@@ -1,7 +1,10 @@
 package automation.pages.adriana_pages;
 
 
+import automation.base.DriverUtil;
+import automation.common.WaitUtils;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -28,8 +31,10 @@ public class SepciPage {
     @FindBy(xpath = ("//div[@class='wd-wishlist-btn wd-action-btn wd-style-text wd-wishlist-icon']//a"))
     private WebElement wishlistButton;
 
-    @FindBy(xpath="(//span[@class=\"wd-tools-icon\"])[2]")
+    @FindBy(xpath = "(//span[@class=\"wd-tools-icon\"])[2]")
     private WebElement wishlishLink;
+
+
 
     public void clickOnThePrimaPaginaLink() {
         primaPaginaLink.click();
@@ -55,19 +60,20 @@ public class SepciPage {
         Assert.assertFalse("Filter element was not cleared", resetareFiltreLink.isSelected());
 
     }
-    public void clickOnSapcaDeBasebal(){
+
+    public void clickOnSapcaDeBasebal() {
         sepciProductLink.click();
     }
-    public void clicksOnWishlistButton(){
 
+    public void clicksOnWishlistButton() {
         wishlistButton.click();
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        WebElement wishlistAddedStateButton=DriverUtil.getDriver().findElement(By.xpath("//a[@class='added']"));
+        WaitUtils.waitForVisibilityOfElement(DriverUtil.getDriver(), wishlistAddedStateButton);
+
     }
-    public void clicksOnWishListLink(){
+
+    public void clicksOnWishListLink() {
+
         wishlishLink.click();
     }
 }
