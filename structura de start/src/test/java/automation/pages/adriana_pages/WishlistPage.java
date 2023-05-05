@@ -16,7 +16,7 @@ public class WishlistPage {
     }
 
     public void checkIfSapcaBaseballIsDisplayed(String nume) {
-        Assert.assertEquals("The product Sapca de baseball is not displayed",nume, SapcaBaseballLink.getText());
+        Assert.assertEquals("The product Sapca de baseball pentru copii is not displayed",nume, SapcaBaseballLink.getText());
     }
 }
 

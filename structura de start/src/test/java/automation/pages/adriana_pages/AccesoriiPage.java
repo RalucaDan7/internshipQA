@@ -5,6 +5,7 @@ package automation.pages.adriana_pages;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,13 +13,13 @@ public class AccesoriiPage {
 
 
     @FindBy(xpath = "(//h1[@class=\"entry-title title\"])")
-    private WebElement accesoriiTitle;
+    private WebElement accesoriiEntryTitle;
 
     @FindBy(xpath = "(//a[@class=\"woodmart-nav-link\"])[21]")
-    private WebElement caciuliTitle;
+    private WebElement caciuliEntryTitle;
 
     @FindBy(xpath = "(//a[@class=\"woodmart-nav-link\"])[22]")
-    private WebElement gentiRucsacuriTitle;
+    private WebElement gentiRucsacuriEntryTitle;
 
     @FindBy(xpath = "(//a[@class=\"woodmart-nav-link\"])[23]")
     private WebElement manusiTitle;
@@ -28,9 +29,8 @@ public class AccesoriiPage {
     private WebElement SepciPageTitle;
 
 
-
     public void checkAccesoriiTitle(String nume) {
-        Assert.assertEquals("The title from Accesorii page  is not correct ", nume, accesoriiTitle.getText());
+        Assert.assertEquals("The title from Accesorii page  is not correct ", nume, accesoriiEntryTitle.getText());
     }
 
 
@@ -39,8 +39,8 @@ public class AccesoriiPage {
 
         List<String> elementAccesorii = new ArrayList<>();
 
-        elementAccesorii.add(caciuliTitle.getText());
-        elementAccesorii.add(gentiRucsacuriTitle.getText());
+        elementAccesorii.add(caciuliEntryTitle.getText());
+        elementAccesorii.add(gentiRucsacuriEntryTitle.getText());
         elementAccesorii.add(manusiTitle.getText());
 
 
