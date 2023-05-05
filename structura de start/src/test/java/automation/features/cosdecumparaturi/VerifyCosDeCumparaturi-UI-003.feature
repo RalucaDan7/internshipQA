@@ -18,7 +18,7 @@ Feature: VerifyCosDeCumparaturi-UI-003
     And Check magazin url page is displayed
       | url | magazin |
 
-  @Tickbird-004 @Automation_Smoke @UI
+  @Tickbird-005 @Automation_Smoke @UI
   Scenario: CosDeCumparaturi-UI-005-CheckTextOnMagazinPage
     Given The user navigates to Home Page
     When  Insert "w${#p2m1iu2%" Password And Click Submit
