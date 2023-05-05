@@ -7,6 +7,9 @@ import automation.pages.octavian_pages.BaietiCategoryPage;
 import automation.pages.octavian_pages.CartPage;
 import automation.pages.octavian_pages.ProductPage;
 import automation.pages.octavian_pages.SearchPage;
+import automation.pages.adriana_pages.*;
+import automation.pages.RalucaPage.BluzeSiHanoraceFetePage;
+import automation.pages.RalucaPage.CostumeDeBaieFetePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -37,6 +40,14 @@ public class BaseTest {
     protected CosDeCumparaturiPage cosDeCumparaturiPage;
 
     protected MagazinPage magazinPage;
+    protected SepciPage sepciPage;
+    protected ProductFetePage productFetePage;
+
+    protected WishlistPage wishlistPage;
+    protected BluzeSiHanoraceFetePage bluzeSiHanoraceFetePage;
+
+    protected CostumeDeBaieFetePage costumeDeBaieFetePage;
+
 
     public void initPages(WebDriver driver) {
 
@@ -62,5 +73,16 @@ public class BaseTest {
         PageFactory.initElements(driver, baietiCategoryPage);
         cartPage = new CartPage();
         PageFactory.initElements(driver, cartPage);
+        sepciPage= new SepciPage();
+        PageFactory.initElements(driver, sepciPage);
+        productFetePage= new ProductFetePage();
+        PageFactory.initElements(driver, productFetePage);
+        wishlistPage = new WishlistPage();
+        PageFactory.initElements(driver, wishlistPage);
+        bluzeSiHanoraceFetePage = new BluzeSiHanoraceFetePage();
+        PageFactory.initElements(driver, bluzeSiHanoraceFetePage);
+        costumeDeBaieFetePage = new CostumeDeBaieFetePage();
+        PageFactory.initElements(driver, cosDeCumparaturiPage);
+
     }
 }

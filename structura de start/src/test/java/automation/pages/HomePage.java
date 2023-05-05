@@ -61,6 +61,9 @@ public class HomePage {
     @FindBy(css = "div[class=\"cart-widget-side wd-side-hidden wd-right\"]")
     private WebElement cosDeCumparaturiSidebarInchisElement;
 
+    //    @FindBy (css= "nav>a[class=\"breadcrumb-link\"]:nth-child(1)")
+    //    private WebElement primaPaginaLink;
+
     @FindBy(xpath = "//div[@class=\"cookies-buttons\"]")
     private WebElement acceptCookiesButton;
 
@@ -124,7 +127,7 @@ public class HomePage {
     }
 
 
-    public void clickOnDropdownItem() {
+    public void clickOnAccesoriiDropdownItem() {
         dropDownItem.click();
     }
 

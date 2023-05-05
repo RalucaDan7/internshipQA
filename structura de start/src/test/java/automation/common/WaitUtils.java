@@ -7,6 +7,7 @@ import automation.base.DriverUtil;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static java.lang.Thread.sleep;
 
@@ -24,5 +25,12 @@ public class WaitUtils {
         } catch (Throwable error) {
             Assert.fail("Timeout waiting for Page Load Request to complete.");
         }
+    }
+    public static void waitForVisibilityOfElement(WebDriver driver, WebElement element) {
+
+        Wait wait = new FluentWait(driver).withTimeout(20, TimeUnit.SECONDS)
+                .ignoring(StaleElementReferenceException.class)
+                .pollingEvery(300, TimeUnit.MILLISECONDS);
+        wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(element)));
     }
 }

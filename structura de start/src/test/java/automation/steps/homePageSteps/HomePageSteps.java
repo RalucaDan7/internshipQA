@@ -40,7 +40,7 @@ public class HomePageSteps extends BaseTest {
 
     @And("User clicks on Sepci si palarii item")
     public void clickOnDropDownItem() {
-        homePage.clickOnDropdownItem();
+        homePage.clickOnAccesoriiDropdownItem();
     }
 
     @When("Click on Trimite-ne mesaj button")
