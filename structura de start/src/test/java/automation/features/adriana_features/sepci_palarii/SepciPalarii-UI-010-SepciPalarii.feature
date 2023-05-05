@@ -7,15 +7,15 @@ Feature: SepciSiPalariiPage-UI-Check functionality of page items
     And   User clicks on Sepci si palarii item
 
 
-  @Tickbird-009 @Automation_Smoke @UI @Adriana
-  Scenario: Sepci-UI-012-Check the "Prima pagina" link is functional
+  @Tickbird-010 @Automation_Smoke @UI @Adriana
+  Scenario: Sepci-UI-010-Check the "Prima pagina" link is functional
 
     And   User clicks on the Prima pagina item
     Then  Check "qa-training" page is displayed
       | url | qa-training |
 
-  @Tickbird-010 @Automation_Smoke @UI @Adriana
-  Scenario: Sepci-UI-013-Check the flow for purchasing an item from Fete page
+  @Tickbird-011 @Automation_Smoke @UI @Adriana
+  Scenario: Sepci-UI-011-Check the flow for purchasing an item from Fete page
 
     And User clicks on Fete item
     And User  clicks on the second product of the page
@@ -25,16 +25,16 @@ Feature: SepciSiPalariiPage-UI-Check functionality of page items
     And User accepts alert pop-up by clicking Ok
 
 
-  @Tickbird-011 @Automation_Smoke @UI @Adriana
-  Scenario:Sepci-UI-014-Check the functionality of "Marime" dropdown filter
+  @Tickbird-012 @Automation_Smoke @UI @Adriana
+  Scenario:Sepci-UI-012-Check the functionality of "Marime" dropdown filter
     And User clicks on Marime dropdown button
     And User choses the SM option from to dropdown list
     And The user clicks the Resetare filtre option
     Then The filters are cleared
 
 
-  @Tickbird-012 @Automation_Smoke @UI @Adriana
-  Scenario:Speci-UI-015- Check if the user can add a product to Wishlist
+  @Tickbird-013 @Automation_Smoke @UI @Adriana
+  Scenario:Sepci-UI-013- Check if the user can add a product to Wishlist
     And User clicks on Sapca de baseball pentru copii product
     And User clicks on Wishlist icon
     And User navigates to Wishlist page to see added products
