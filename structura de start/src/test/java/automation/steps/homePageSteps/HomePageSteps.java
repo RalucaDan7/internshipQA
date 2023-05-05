@@ -1,11 +1,9 @@
 package automation.steps.homePageSteps;
 
 import automation.baseTest.BaseTest;
-import automation.common.WaitUtils;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import cucumber.api.java.en.And;
 
 public class HomePageSteps extends BaseTest {
 
@@ -102,7 +100,6 @@ public class HomePageSteps extends BaseTest {
 
     @And("Accepts cookies")
     public void acceptCookies(){
-        WaitUtils.waitForPageToLoad();
         homePage.acceptCookies();
     }
 }

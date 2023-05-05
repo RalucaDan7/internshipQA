@@ -1,6 +1,7 @@
 package automation.pages;
 
 import automation.base.DriverUtil;
+import automation.common.WaitUtils;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -136,6 +137,7 @@ public class HomePage {
     }
 
     public void acceptCookies() {
+        WaitUtils.waitForPageToLoad();
         acceptCookiesButton.click();
     }
 }

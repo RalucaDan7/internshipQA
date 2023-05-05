@@ -1,6 +1,7 @@
 package automation.pages.octavian_pages;
 
 import automation.base.DriverUtil;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -52,7 +53,7 @@ public class BaietiCategoryPage {
 
         for (WebElement element : productsDivList){
             if (element.getText().contains(pass)){
-                System.out.println("Price of: \"" + pass + "\" is: " + element.findElement(By.xpath(".//span[@class='price']")).getText());
+                System.out.println("\nPrice of: \"" + pass + "\" is: " + element.findElement(By.xpath(".//span[@class='price']")).getText());
             }
         }
     }
