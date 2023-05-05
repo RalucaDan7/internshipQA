@@ -60,6 +60,9 @@ public class HomePage {
     @FindBy(css = "div[class=\"cart-widget-side wd-side-hidden wd-right\"]")
     private WebElement cosDeCumparaturiSidebarInchisElement;
 
+//    @FindBy (css= "nav>a[class=\"breadcrumb-link\"]:nth-child(1)")
+//    private WebElement primaPaginaLink;
+
     public void checkFavoritesLinkIsVisible() {
         Assert.assertTrue("dashboard link is not visible ", favoritesLink.isDisplayed());
     }
@@ -120,7 +123,7 @@ public class HomePage {
     }
 
 
-    public void clickOnDropdownItem() {
+    public void clickOnAccesoriiDropdownItem() {
         dropDownItem.click();
     }
 
@@ -131,6 +134,8 @@ public class HomePage {
     public void clickOnTheContactButtonCss() {
         messageLinkCss.click();
     }
+
+
 
 }
 
