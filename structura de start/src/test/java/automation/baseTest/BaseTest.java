@@ -3,10 +3,7 @@ package automation.baseTest;
 
 import automation.pages.*;
 import automation.base.DriverUtil;
-import automation.pages.adriana_pages.AccesoriiPage;
-import automation.pages.adriana_pages.ContactPage;
-import automation.pages.adriana_pages.ProductFetePage;
-import automation.pages.adriana_pages.SepciPage;
+import automation.pages.adriana_pages.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -40,6 +37,8 @@ public class BaseTest {
     protected SepciPage sepciPage;
     protected ProductFetePage productFetePage;
 
+    protected WishlistPage wishlistPage;
+
     public void initPages(WebDriver driver) {
 
         homePage = new HomePage();
@@ -68,5 +67,7 @@ public class BaseTest {
         PageFactory.initElements(driver, sepciPage);
         productFetePage= new ProductFetePage();
         PageFactory.initElements(driver, productFetePage);
+        wishlistPage = new WishlistPage();
+        PageFactory.initElements(driver, wishlistPage);
     }
 }

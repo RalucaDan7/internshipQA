@@ -28,6 +28,9 @@ public class SepciPage {
     @FindBy(xpath = ("//div[@class='wd-wishlist-btn wd-action-btn wd-style-text wd-wishlist-icon']//a"))
     private WebElement wishlistButton;
 
+    @FindBy(xpath="(//span[@class=\"wd-tools-icon\"])[2]")
+    private WebElement wishlishLink;
+
     public void clickOnThePrimaPaginaLink() {
         primaPaginaLink.click();
     }
@@ -63,5 +66,8 @@ public class SepciPage {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+    public void clicksOnWishListLink(){
+        wishlishLink.click();
     }
 }

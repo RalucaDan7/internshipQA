@@ -15,6 +15,11 @@ public class AccesoriiSteps extends BaseTest {
         accesoriiPage.checkAccesoriiTitle(title);
     }
 
+    @Then("A page named {string} is displayed")
+    public void checkPageTitleDropdownIsDisplayed(String title) {
+        accesoriiPage.checkDropdownItemTitle(title);
+    }
+
     @Then("A dropdown menu containing the following items is displayed")
     public void checkDropdownContentIsDisplayed(DataTable dataTable) {
         List<String> dataL = dataTable.asList(String.class);
@@ -23,9 +28,6 @@ public class AccesoriiSteps extends BaseTest {
         }
     }
 
-    @Then("A page named {string} is displayed")
-    public void checkPageTitleDropdownIsDisplayed(String title) {
-        accesoriiPage.checkDropdownItemTitle(title);
-    }
+
 
 }

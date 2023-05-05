@@ -43,5 +43,9 @@ public class SepciSteps extends BaseTest {
     public void clickOnWishlistButton(){
         sepciPage.clicksOnWishlistButton();
     }
+    @And ("User navigates to Wishlist page to see added products")
+    public void clickOnWishlistLink() {
+        sepciPage.clicksOnWishListLink();
+    }
 }
 

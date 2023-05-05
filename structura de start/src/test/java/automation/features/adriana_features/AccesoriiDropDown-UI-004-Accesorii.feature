@@ -1,7 +1,16 @@
 Feature: AccesoriiDropDown-UI-Main Page
 
-  @Tickbird-011 @Automation_Smoke @UI @Adriana
-  Scenario: Accesorii-UI-011-Check the display of Accesorii button
+
+  @Tickbird-004 @Automation_Smoke @UI @Adriana
+  Scenario: Accesorii-UI-004-Checking the functionality of Accesorii button
+    Given The user navigates to Home Page
+    When  Insert "w${#p2m1iu2%" Password And Click Submit
+    And  Click the  Accesorii button
+    Then  A page containing "Accesorii" name is displayed
+
+
+  @Tickbird-005 @Automation_Smoke @UI @Adriana
+  Scenario: Accesorii-UI-005-Check the display of Accesorii button
     Given The user navigates to Home Page
     When  Insert "w${#p2m1iu2%" Password And Click Submit
     And  User mouse over the Accesorii dropdown
@@ -11,8 +20,8 @@ Feature: AccesoriiDropDown-UI-Main Page
       | Manusi             |
 
 
-  @Tickbird-012 @Automation_Smoke @UI @Adriana
-  Scenario: Accesorii-UI-012-Check one item from dropdown is clickable
+  @Tickbird-006 @Automation_Smoke @UI @Adriana
+  Scenario: Accesorii-UI-006-Check one item from dropdown is clickable
     Given The user navigates to Home Page
     When  Insert "w${#p2m1iu2%" Password And Click Submit
     And User mouse over the Accesorii dropdown
