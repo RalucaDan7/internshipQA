@@ -6,6 +6,8 @@ import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class FavoritePage {
     @FindBy(xpath = "(//h1[@class=\"entry-title title\"])[1]")
     private WebElement favoriteTitle;
@@ -15,6 +17,9 @@ public class FavoritePage {
 
     @FindBy(css = "h3[class=\"wd-entities-title\"]")
     private WebElement pantaloniMudSandPentruFeteProduct;
+
+    @FindBy(xpath = "//h3[@class=\"wd-entities-title\"]")
+    private List<WebElement> productsList;
 
     public void checkTitleListadeDorinte() {
         Assert.assertTrue("Title Lista de Dorinte is not displayed", favoriteTitle.isDisplayed());
@@ -28,4 +33,17 @@ public class FavoritePage {
         Assert.assertTrue("Pantaloni Mud Sand product is not displayed", pantaloniMudSandPentruFeteProduct.isDisplayed());
         Assert.assertTrue("Pantaloni Mud Sand product is not displayed", pantaloniMudSandPentruFeteProduct.getText().equals(title));
     }
+
+    public void checkItemsInFavoriteList(List<String> data){
+        for (int i=0;i<productsList.size();i++){
+            System.out.println(productsList.get(i).getText());
+            System.out.println("blabla"+i);
+            System.out.println("Produs"+i+" = "+data.get(i));
+            Assert.assertTrue("Name of product is not correct", productsList.get(i).getText().equals(data.get(i)));
+
+        }
+
+    }
+
+
     }

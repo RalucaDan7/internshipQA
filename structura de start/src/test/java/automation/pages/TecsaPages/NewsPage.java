@@ -16,6 +16,12 @@ public class NewsPage {
     @FindBy(css ="div[class=\"wd-pf-btn wd-col\"]")
     private WebElement filtreazaButton;
 
+    @FindBy(css = "img[data-src=\"https://qa-training.co.in/wp-content/uploads/2023/03/IB0IB010920LJ_1-300x300.jpg\"]")
+    private WebElement secondProduct;
+
+    @FindBy(css = "img[data-src=\"https://qa-training.co.in/wp-content/uploads/2023/02/46335-00-0941Backe-commerce.jpg\"]")
+    private WebElement firstProduct;
+
 
     public void checkPageIsDisplayed(String url) {
         Assert.assertTrue("The URL of Noutati-fete page is not correct", DriverUtil.getDriver().getCurrentUrl().contains(url));
@@ -31,4 +37,14 @@ public class NewsPage {
 
     public void clickOnFiltreazaButton(){
         filtreazaButton.click();}
+
+    public void clickOnSecondProduct(){
+        secondProduct.click();
+    }
+
+    public void clickFirstProduct(){
+        firstProduct.click();
+    }
+
+
 }
