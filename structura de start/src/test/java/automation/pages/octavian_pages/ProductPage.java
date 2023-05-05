@@ -42,11 +42,11 @@ public class ProductPage {
         sizeBox.click();
         int count = 0;
         for (WebElement element: selectSizeDropdownList) {
-            count++;
             if (element.getText().contains(pass)){
                 element.click();
                 break;
             }
+            count++;
         }
         if (count == selectSizeDropdownList.size()){
             System.out.println("Desired size is not a valid option for product: \"" + productTitle.getText() + "\".");

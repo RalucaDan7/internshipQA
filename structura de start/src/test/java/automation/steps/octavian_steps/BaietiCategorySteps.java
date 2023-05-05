@@ -16,9 +16,9 @@ public class BaietiCategorySteps extends BaseTest {
         baietiCategoryPage.clickSecondProduct();
     }
 
-    @And("The user clicks on {string}")
-    public void clickOnProduct(String pass){
-
+    @And("The user clicks on {string} product")
+    public void clickOnGivenProduct(String pass){
+        baietiCategoryPage.clickOnGivenProduct(pass);
     }
 
 

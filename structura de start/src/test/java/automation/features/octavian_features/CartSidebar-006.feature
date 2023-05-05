@@ -43,4 +43,16 @@ Feature: Cart-Check items in cart
       | product1 | Blugi regular fit pentru baieti    |
       | product2 | Bluza polo din bumbac pentru copii |
 
+  @Tickbird-014 @Automation_Smoke @UI @Octavian
+  Scenario: cart-014-Add items to cart from feature file
+    And The user clicks on "Pantaloni din bumbac pentru copii" product
+    And The user selects "122" size
+    And The user clicks on Adauga in cos
+    And The user navigates back
+    And The user clicks on "Bluza polo din bumbac pentru copii" product
+    And The user selects "140" size
+    And The user clicks on Adauga in cos
+    Then The following products should be in the cart by key table
+      | product1 | Pantaloni din bumbac pentru copii  |
+      | product2 | Bluza polo din bumbac pentru copii |
 
