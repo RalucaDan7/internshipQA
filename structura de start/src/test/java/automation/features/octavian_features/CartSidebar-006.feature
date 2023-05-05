@@ -3,7 +3,7 @@ Feature: Cart-Check items in cart
   Background:
     Given The user navigates to Baieti Category Page
     When  Insert "w${#p2m1iu2%" Password And Click Submit
-#    And Accepts cookies
+  And Accepts cookies
 
   @Tickbird-011 @Automation_Smoke @UI @Octavian
   Scenario: cart-011-Check items are added to cart
