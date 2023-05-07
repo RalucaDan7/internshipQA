@@ -3,13 +3,12 @@ package automation.baseTest;
 
 import automation.pages.*;
 import automation.base.DriverUtil;
+import automation.pages.RalucaPages.*;
 import automation.pages.octavian_pages.BaietiCategoryPage;
 import automation.pages.octavian_pages.CartPage;
 import automation.pages.octavian_pages.ProductPage;
 import automation.pages.octavian_pages.SearchPage;
 import automation.pages.adriana_pages.*;
-import automation.pages.RalucaPage.BluzeSiHanoraceFetePage;
-import automation.pages.RalucaPage.CostumeDeBaieFetePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -48,6 +47,8 @@ public class BaseTest {
 
     protected CostumeDeBaieFetePage costumeDeBaieFetePage;
 
+    protected CartPageRaluca cartPageRaluca;
+
 
     public void initPages(WebDriver driver) {
 
@@ -83,6 +84,8 @@ public class BaseTest {
         PageFactory.initElements(driver, bluzeSiHanoraceFetePage);
         costumeDeBaieFetePage = new CostumeDeBaieFetePage();
         PageFactory.initElements(driver, cosDeCumparaturiPage);
+        cartPageRaluca = new CartPageRaluca();
+        PageFactory.initElements(driver, cartPageRaluca);
 
     }
 }

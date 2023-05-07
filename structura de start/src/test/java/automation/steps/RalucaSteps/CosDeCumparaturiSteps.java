@@ -1,7 +1,6 @@
-package automation.steps.CosDeCumparaturiSteps;
+package automation.steps.RalucaSteps;
 
 import automation.baseTest.BaseTest;
-import automation.pages.CosDeCumparaturiPage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 

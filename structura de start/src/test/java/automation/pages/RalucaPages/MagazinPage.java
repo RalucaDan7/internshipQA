@@ -1,4 +1,4 @@
-package automation.pages;
+package automation.pages.RalucaPages;
 
 import automation.base.DriverUtil;
 import org.junit.Assert;

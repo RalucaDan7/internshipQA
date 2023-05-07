@@ -1,4 +1,4 @@
-package automation.steps.MagazinPageSteps;
+package automation.steps.RalucaSteps;
 
 import automation.baseTest.BaseTest;
 import cucumber.api.java.en.And;

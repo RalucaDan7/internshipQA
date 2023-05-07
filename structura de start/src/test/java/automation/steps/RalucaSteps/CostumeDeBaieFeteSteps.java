@@ -6,6 +6,7 @@ import automation.common.Constants;
 import automation.common.WaitUtils;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 
 public class CostumeDeBaieFeteSteps extends BaseTest {
     @Given("The user navigates to Costume de Baie Page")
@@ -14,8 +15,23 @@ public class CostumeDeBaieFeteSteps extends BaseTest {
         WaitUtils.waitForPageToLoad();
     }
 
-    @And("Check {string} is displayed")
-    public void checkDisplayedCostumeDeBaie(String costumDeBaieNume) {
-        costumeDeBaieFetePage.checkDisplayedCostumeDeBaie(costumDeBaieNume);
+    @And("Check {string} is displayed and click on it")
+    public void checkDisplayedCostumeDeBaieAndClickOnIt(String costumDeBaieNume) {
+        costumeDeBaieFetePage.checkDisplayedCostumeDeBaieAndClickOnIt(costumDeBaieNume);
+    }
+
+    @Then("Check {string} is displayed on the page with the individual product")
+    public void checkProductTitleIsDisplayed(String productName) {
+        costumeDeBaieFetePage.checkProductTitle(productName);
+    }
+
+    @And("Click on Selecteaza o marime and choose {string}")
+    public void selectTheSize(String size) {
+        costumeDeBaieFetePage.selectTheSize(size);
+    }
+
+    @Then("Click on Adauga in cos button")
+    public void clickOnAdaugaInCosButton() {
+        costumeDeBaieFetePage.clickOnAdaugaInCosButton();
     }
 }
