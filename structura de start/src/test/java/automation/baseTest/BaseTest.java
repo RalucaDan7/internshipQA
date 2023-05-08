@@ -47,7 +47,7 @@ public class BaseTest {
 
     protected CostumeDeBaieFetePage costumeDeBaieFetePage;
 
-    protected CartPageRaluca cartPageRaluca;
+    protected RalucaCartPage ralucaCartPage;
 
 
     public void initPages(WebDriver driver) {
@@ -84,8 +84,8 @@ public class BaseTest {
         PageFactory.initElements(driver, bluzeSiHanoraceFetePage);
         costumeDeBaieFetePage = new CostumeDeBaieFetePage();
         PageFactory.initElements(driver, cosDeCumparaturiPage);
-        cartPageRaluca = new CartPageRaluca();
-        PageFactory.initElements(driver, cartPageRaluca);
+        ralucaCartPage = new RalucaCartPage();
+        PageFactory.initElements(driver, ralucaCartPage);
 
     }
 }

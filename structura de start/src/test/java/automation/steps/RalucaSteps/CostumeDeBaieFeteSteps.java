@@ -34,4 +34,9 @@ public class CostumeDeBaieFeteSteps extends BaseTest {
     public void clickOnAdaugaInCosButton() {
         costumeDeBaieFetePage.clickOnAdaugaInCosButton();
     }
+
+    @Then("Check {string} is displayed and print {string}")
+    public void checkTheProductAndPrintThePrice(String costumDeBaieNume, String price) {
+        costumeDeBaieFetePage.checkTheProductAndPrintThePrice(costumDeBaieNume, price);
+    }
 }

@@ -16,7 +16,7 @@ import java.util.List;
 public class CostumeDeBaieFetePage {
 
     public void checkDisplayedCostumeDeBaieAndClickOnIt(String costumeDeBaieNume) {
-        boolean raluca = false;
+        boolean value = false;
         WebElement title = DriverUtil.getDriver().findElement(By.cssSelector(".entry-title.title"));
         WaitUtils.waitForVisibilityOfElement(DriverUtil.getDriver(), title);
         List<WebElement> listaProduse = DriverUtil.getDriver().findElements(By.cssSelector("h3.wd-entities-title a"));
@@ -28,13 +28,13 @@ public class CostumeDeBaieFetePage {
                 Actions action = new Actions(DriverUtil.getDriver());
                 action.moveToElement(element).perform();
                 element.click();
-                raluca = true;
+                value = true;
                 break;
             }
         }
 
-        if (raluca == false) {
-            System.out.println(costumeDeBaieNume + "is not in this page");
+        if (value == false) {
+            System.out.println(costumeDeBaieNume + "is not on this page");
         }
     }
 
@@ -56,14 +56,19 @@ public class CostumeDeBaieFetePage {
                 break;
             }
         }
-        if (desiredSize == false) {
-            System.out.println(size + " is not in stock. Please select another size.");
-        }
-
+        Assert.assertTrue(size + " is not in stock. Please select another size", desiredSize);
     }
 
     public void clickOnAdaugaInCosButton() {
-        WebElement adaugaInCosButton = DriverUtil.getDriver().findElement(By.xpath("(//button[@type='submit'])[2]"));
+        WebElement adaugaInCosButton = DriverUtil.getDriver().findElement(By.xpath("//button[contains(text(),'Adaugă în coș')]"));
         adaugaInCosButton.click();
+    }
+
+    public void checkTheProductAndPrintThePrice(String costumDeBaieNume, String price) {
+        List<WebElement> listaProduse = DriverUtil.getDriver().findElements(By.cssSelector("h3.wd-entities-title a"));
+        if (listaProduse.contains(costumDeBaieNume)) {
+            System.out.println(price);
+        }
+
     }
 }
