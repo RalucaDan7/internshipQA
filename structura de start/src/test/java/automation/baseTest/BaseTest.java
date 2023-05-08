@@ -3,6 +3,9 @@ package automation.baseTest;
 
 import automation.pages.*;
 import automation.base.DriverUtil;
+import automation.pages.TecsaPages.*;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import automation.pages.octavian_pages.BaietiCategoryPage;
 import automation.pages.octavian_pages.CartPage;
 import automation.pages.octavian_pages.ProductPage;
@@ -10,8 +13,6 @@ import automation.pages.octavian_pages.SearchPage;
 import automation.pages.adriana_pages.*;
 import automation.pages.RalucaPage.BluzeSiHanoraceFetePage;
 import automation.pages.RalucaPage.CostumeDeBaieFetePage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
 
 
 public class BaseTest {
@@ -25,6 +26,16 @@ public class BaseTest {
 
     protected LoginPage loginPage;
 
+    protected FavoritePage favoritePage;
+
+    protected ForgotPasswordPage forgotPasswordPage;
+
+    protected GirlsSectionPage girlsSectionPage;
+
+    protected ProductPage productPage;
+
+    protected NewsPage newsPage;
+
     protected SearchPage searchPage;
 
     protected ProductPage productPage;
@@ -33,6 +44,9 @@ public class BaseTest {
 
     protected CartPage cartPage;
 
+
+    protected MagazinePage magazinePage;
+
     protected AccesoriiPage accesoriiPage;
 
     protected ContactPage contactPage;
@@ -40,6 +54,9 @@ public class BaseTest {
     protected CosDeCumparaturiPage cosDeCumparaturiPage;
 
     protected MagazinPage magazinPage;
+
+    protected BasketPage basketPage;
+
     protected SepciPage sepciPage;
     protected ProductFetePage productFetePage;
 
@@ -47,6 +64,7 @@ public class BaseTest {
     protected BluzeSiHanoraceFetePage bluzeSiHanoraceFetePage;
 
     protected CostumeDeBaieFetePage costumeDeBaieFetePage;
+
 
 
     public void initPages(WebDriver driver) {
@@ -57,6 +75,18 @@ public class BaseTest {
         PageFactory.initElements(driver, basePage);
         loginPage = new LoginPage();
         PageFactory.initElements(driver, loginPage);
+        favoritePage = new FavoritePage();
+        PageFactory.initElements(driver, favoritePage);
+        forgotPasswordPage = new ForgotPasswordPage();
+        PageFactory.initElements(driver, forgotPasswordPage);
+        girlsSectionPage = new GirlsSectionPage();
+        PageFactory.initElements(driver, girlsSectionPage);
+        productPage = new ProductPage();
+        PageFactory.initElements(driver,productPage);
+        newsPage = new NewsPage();
+        PageFactory.initElements(driver,newsPage);
+        magazinePage = new MagazinePage();
+        PageFactory.initElements(driver,magazinePage);
         accesoriiPage = new AccesoriiPage();
         PageFactory.initElements(driver, accesoriiPage);
         contactPage = new ContactPage();
@@ -65,6 +95,8 @@ public class BaseTest {
         PageFactory.initElements(driver, cosDeCumparaturiPage);
         magazinPage = new MagazinPage();
         PageFactory.initElements(driver, magazinPage);
+        basketPage = new BasketPage();
+        PageFactory.initElements(driver, basketPage);
         searchPage = new SearchPage();
         PageFactory.initElements(driver, searchPage);
         productPage = new ProductPage();

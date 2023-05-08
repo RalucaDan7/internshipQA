@@ -33,10 +33,16 @@ public class NavigationSteps extends BaseTest {
         WaitUtils.waitForPageToLoad();
     }
 
+    @Given("The user navigates to News Girls Page")
+    public void userNavigatesToNewsGirlsPage() {
+        DriverUtil.getDriver().get(Constants.BASE_URL+Constants.NEWSGIRLSPAGE_URL);
+        WaitUtils.waitForPageToLoad();
+    }
     @Given("The user navigates to Baieti Category Page")
     public void  userNavigatesToBaietiCategoryPage(){
         DriverUtil.getDriver().get(Constants.BASE_URL + Constants.BaietiCategoryPage_URL);
         WaitUtils.waitForPageToLoad();
     }
+
 
 }
