@@ -55,10 +55,17 @@ public class BaietiCategoryPage {
     }
 
     public void checkPrice(String pass) {
-        for (WebElement element : productsDivList){
-            if (element.getText().contains(pass)){
-                System.out.println("\nPrice of \"" + pass + "\" is: " + element.findElement(By.xpath(".//span[@class='price']")).getText());
+        boolean exists = false;
+        int i = 0;
+        while (i < productsDivList.size()){
+            if (productsDivList.get(i).getText().contains(pass)){
+                System.out.println("\nPrice of \"" + pass + "\" is: " + productsDivList.get(i).findElement(By.xpath(".//span[@class='price']")).getText());
+                exists = true;
             }
+            i++;
+        }
+        if (!exists){
+            System.out.println("Product: \"" + pass + "\" was not found.");
         }
     }
 

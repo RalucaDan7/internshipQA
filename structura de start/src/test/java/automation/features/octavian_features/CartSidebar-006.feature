@@ -59,7 +59,7 @@ Feature: Cart-Check items in cart
 
   @Tickbird-015 @Automation_Smoke @UI @Octavian
   Scenario: cart-015-Check item price
-    Then User checks price of "Hanorac cu gluga pentru copii"
+    Then User checks price of "Pantaloni din bumbac pentru copii"
 
   @Tickbird-016 @Automation_Smoke @UI @Octavian
   Scenario: cart-016-Check item price with load more items
