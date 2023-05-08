@@ -8,4 +8,7 @@ public class BasePage {
     public void checkPageIsDisplayed(String pageName, String url) {
         Assert.assertTrue("The URL of " + pageName + " is not correct", DriverUtil.getDriver().getCurrentUrl().contains(url));
     }
+    public void checkPageIsVisible(String pageName){
+        Assert.assertTrue("The URL of " + pageName + " is not correct", DriverUtil.getDriver().getCurrentUrl().contains(pageName));
+    }
 }

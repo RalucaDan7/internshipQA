@@ -27,6 +27,24 @@ public class HomePage {
     @FindBy(xpath = "(//div[@class=\"wd-dropdown-results wd-scroll wd-dropdown wd-opened\"])[1]")
     private WebElement dropDownMenu;
 
+    @FindBy(xpath = "(//span[@class=\"wd-tools-icon\"])[1]")
+    private WebElement contulMeuButton;
+
+    @FindBy(css = "div[class=\"login-form-side wd-side-hidden wd-right wd-opened\"]")
+    private WebElement autentificareSideMenu;
+
+    @FindBy(xpath = "//input[@name=\"username\"]")
+    private WebElement eMailAddress;
+
+    @FindBy(xpath = "//input[@name=\"password\"]")
+    private WebElement passwordInput;
+
+    @FindBy(xpath = "//button[@name=\"login\"]")
+    private WebElement logareButton;
+
+    @FindBy(xpath = "//ul[@class=\"wd-sub-menu\"]")
+    private WebElement subMenu;
+
     public void checkFavoritesLinkIsVisible() {
         Assert.assertTrue("dashboard link is not visible ", favoritesLink.isDisplayed());
     }
@@ -75,5 +93,26 @@ public class HomePage {
 
 
     }
+    public void clickOnContulMeuButton(){
+        contulMeuButton.click();
+    }
+    public void seeAutentificareSideMenu(){
+        autentificareSideMenu.isDisplayed();
+    }
+
+    public void inputEmailAddress(String username){
+        eMailAddress.sendKeys(username);
+    }
+    public void inputPassword(String parola){
+    passwordInput.sendKeys(parola);
+    }
+    public void clickOnLogareButton(){
+        logareButton.click();
+    }
+
+    public void checkIfSubMenuIsVisible(){
+        subMenu.isDisplayed();
+    }
+
 }
 

@@ -15,5 +15,10 @@ public class BaseSteps extends BaseTest {
         basePage.checkPageIsDisplayed(pageName, dataMap.get("url"));
     }
 
+    @Then("Check {string} page is visible")
+    public void checkPageIsVisible(String ionel){
+        basePage.checkPageIsVisible(ionel);
+    }
+
 
 }

@@ -18,7 +18,7 @@ public class NoutatiPage {
 
     public void checkNoutatiFeteIsVisible(String numelecarevinedinfeature) {
         Assert.assertTrue("The title is visible on Noutati page ", noutatiFeteTitleByCss.isDisplayed());
-        Assert.assertTrue("The title is visible on Noutati page ", noutatiFeteTitleByXpath.getText().equals(numelecarevinedinfeature));
+        Assert.assertTrue("The title is not visible on Noutati page ", noutatiFeteTitleByXpath.getText().equals(numelecarevinedinfeature));
     }
 
     public void checkNoutatiFeteIsVisibleByCss(String pageName, String url) {
