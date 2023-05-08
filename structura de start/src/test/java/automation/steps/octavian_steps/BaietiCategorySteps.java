@@ -27,5 +27,10 @@ public class BaietiCategorySteps extends BaseTest {
         baietiCategoryPage.checkPrice(pass);
     }
 
+    @Then("User checks price of {string} with load more")
+    public void checkPriceLoadMore(String pass){
+        baietiCategoryPage.checkPriceLoadMore(pass);
+    }
+
 
 }

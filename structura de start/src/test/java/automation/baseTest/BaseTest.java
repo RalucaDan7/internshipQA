@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import automation.pages.octavian_pages.BaietiCategoryPage;
 import automation.pages.octavian_pages.CartPage;
-import automation.pages.octavian_pages.ProductPage;
+import automation.pages.octavian_pages.ProductOctavianPage;
 import automation.pages.octavian_pages.SearchPage;
 import automation.pages.adriana_pages.*;
 import automation.pages.RalucaPage.BluzeSiHanoraceFetePage;
@@ -38,7 +38,7 @@ public class BaseTest {
 
     protected SearchPage searchPage;
 
-    protected ProductPage productPage;
+    protected ProductOctavianPage productOctavianPage;
 
     protected BaietiCategoryPage baietiCategoryPage;
 
@@ -99,8 +99,8 @@ public class BaseTest {
         PageFactory.initElements(driver, basketPage);
         searchPage = new SearchPage();
         PageFactory.initElements(driver, searchPage);
-        productPage = new ProductPage();
-        PageFactory.initElements(driver, productPage);
+        productOctavianPage = new ProductOctavianPage();
+        PageFactory.initElements(driver, productOctavianPage);
         baietiCategoryPage = new BaietiCategoryPage();
         PageFactory.initElements(driver, baietiCategoryPage);
         cartPage = new CartPage();
