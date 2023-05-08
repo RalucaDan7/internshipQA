@@ -141,10 +141,6 @@ public class HomePage {
         baietiCategoryButton.click();
     }
 
-    public void clickOnCosDeCumparaturi() {
-        cosDeCumparaturiLink.click();
-    }
-
     public void checkTheSidebarIsNotDisplayed() {
         Assert.assertEquals(cosDeCumparaturiSidebarInchisElement.getAttribute("class"), "cart-widget-side wd-side-hidden wd-right");
     }
