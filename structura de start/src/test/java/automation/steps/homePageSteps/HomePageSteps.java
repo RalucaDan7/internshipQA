@@ -18,6 +18,19 @@ public class HomePageSteps extends BaseTest {
         homePage.clickOnMyAccountButton();
     }
 
+    @And("Click On Lista mea de dorințe Button")
+    public void clickOnListaMeaDeDorinteButton() {
+        homePage.clickOnFavoriteButton();
+    }
+
+
+    @Then("Check {string} title from Home Page")
+    public void checkTitleExploreazacategorii(String title){
+        homePage.checkTitleExploreazacategorii(title);
+    }
+
+    @And("Click On FogotPassword Link")
+    public void clickOnForgotPasswordLink(){homePage.clickOnForgotPasswordLink();}
     @When("Click on Cos de cumparaturi")
     public void clickOnCosDeCumparaturi() {
         homePage.clickOnCosDeCumparaturi();
@@ -44,9 +57,14 @@ public class HomePageSteps extends BaseTest {
     }
 
     @When("Click on Trimite-ne mesaj button")
-    public void clickOnContactButton() {
+    public void clickOnContactButtonFromHomepage() {
         homePage.clickOnTheContactButton();
     }
+    @And("Click on Descopera Colectia from home page")
+    public void clickOnDescoperaColectiabutton(){homePage.clickOnDescoperaColectiabutton();}
+
+    @And("Click On News button from Home page")
+    public void clickOnNewsButton(){homePage.clickOnNewsButton();}
 
     @When("Click on Trimite-ne mesaj button  using CSS")
     public void clickOnContactButtonCss() {
