@@ -47,7 +47,7 @@ public class BaseTest {
 
     protected SearchPage searchPage;
 
-    protected ProductPage productPage;
+    protected ProductTecsaPage productTecsaPage;
 
     protected BaietiCategoryPage baietiCategoryPage;
 
@@ -96,8 +96,8 @@ public class BaseTest {
         PageFactory.initElements(driver, forgotPasswordPage);
         girlsSectionPage = new GirlsSectionPage();
         PageFactory.initElements(driver, girlsSectionPage);
-        productPage = new ProductPage();
-        PageFactory.initElements(driver,productPage);
+        productTecsaPage = new ProductTecsaPage();
+        PageFactory.initElements(driver,productTecsaPage);
         newsPage = new NewsPage();
         PageFactory.initElements(driver,newsPage);
         magazinePage = new MagazinePage();

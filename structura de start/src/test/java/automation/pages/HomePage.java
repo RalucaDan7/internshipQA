@@ -4,10 +4,7 @@ import automation.base.DriverUtil;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.w3c.dom.html.HTMLInputElement;
-import automation.base.DriverUtil;
 import org.openqa.selenium.interactions.Actions;
-import org.aspectj.bridge.IMessage;
 
 
 public class HomePage {
@@ -51,7 +48,7 @@ public class HomePage {
     private WebElement searchBox;
 
     @FindBy(xpath = "(//button[@type=\"submit\"])[1]")
-    private WebElement searchButton;
+    private WebElement searchSubmitButton;
 
     @FindBy(css = "input[title=\"Cauta produse\"]:nth-of-type(1)")
     private WebElement searchBoxCSS;
@@ -131,7 +128,7 @@ public class HomePage {
     }
 
     public void clickSearch(){
-        searchButton.click();
+        searchSubmitButton.click();
     }
 
     public void insertKeywordInSearchBoxCSS(String pass) {
@@ -168,7 +165,7 @@ public class HomePage {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        searchButton.click();
+        searchSubmitButton.click();
     }
 
     public void completeSearchInput2() {
