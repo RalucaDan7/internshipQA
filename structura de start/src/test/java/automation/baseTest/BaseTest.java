@@ -3,7 +3,11 @@ package automation.baseTest;
 
 import automation.pages.*;
 import automation.base.DriverUtil;
+import automation.pages.Daniel.pages.RezultateRochiePage;
+import automation.pages.Daniel.pages.SignInPage;
+import automation.pages.LoginPage;
 import automation.pages.TecsaPages.*;
+import automation.pages.Daniel.pages.NoutatiPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import automation.pages.octavian_pages.BaietiCategoryPage;
@@ -27,17 +31,22 @@ public class BaseTest {
     protected LoginPage loginPage;
 
     protected FavoritePage favoritePage;
+    protected NoutatiPage noutatiPage;
+
+    protected RezultateRochiePage rezultateRochiePage;
+
+    protected SignInPage signInPage;
 
     protected ForgotPasswordPage forgotPasswordPage;
 
     protected GirlsSectionPage girlsSectionPage;
 
-    protected ProductPage productPage;
 
     protected NewsPage newsPage;
 
     protected SearchPage searchPage;
 
+    protected ProductTecsaPage productTecsaPage;
     protected ProductOctavianPage productOctavianPage;
 
     protected BaietiCategoryPage baietiCategoryPage;
@@ -71,6 +80,12 @@ public class BaseTest {
 
         homePage = new HomePage();
         PageFactory.initElements(driver, homePage);
+        noutatiPage = new NoutatiPage();
+        PageFactory.initElements(driver, noutatiPage);
+        rezultateRochiePage = new RezultateRochiePage();
+        PageFactory.initElements(driver, rezultateRochiePage);
+        signInPage = new SignInPage();
+        PageFactory.initElements(driver, signInPage);
         basePage = new BasePage();
         PageFactory.initElements(driver, basePage);
         loginPage = new LoginPage();
@@ -81,8 +96,8 @@ public class BaseTest {
         PageFactory.initElements(driver, forgotPasswordPage);
         girlsSectionPage = new GirlsSectionPage();
         PageFactory.initElements(driver, girlsSectionPage);
-        productPage = new ProductPage();
-        PageFactory.initElements(driver,productPage);
+        productTecsaPage = new ProductTecsaPage();
+        PageFactory.initElements(driver,productTecsaPage);
         newsPage = new NewsPage();
         PageFactory.initElements(driver,newsPage);
         magazinePage = new MagazinePage();

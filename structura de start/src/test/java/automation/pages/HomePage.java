@@ -5,10 +5,7 @@ import automation.common.WaitUtils;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.w3c.dom.html.HTMLInputElement;
-import automation.base.DriverUtil;
 import org.openqa.selenium.interactions.Actions;
-import org.aspectj.bridge.IMessage;
 
 
 public class HomePage {
@@ -24,6 +21,23 @@ public class HomePage {
 
     @FindBy(css = "a[href=\"https://qa-training.co.in/contul-meu/lost-password/\"]")
     private WebElement forgotPasswordLink;
+    @FindBy(xpath = "(//span[contains(text(),'Noutati')])[1]")
+    private WebElement noutatiLink;
+
+    @FindBy(xpath = "(//input[@title=\"Cauta produse\"])[1]")
+    private WebElement cautaProduseInputOne;
+
+    @FindBy(xpath = "(//input[@title=\"Cauta produse\"])[1]")
+    private WebElement cautaProduseInputTwo;
+
+    @FindBy(xpath = "(//button[@class=\"searchsubmit\"])[1]")
+    private WebElement searchButton;
+
+    @FindBy(xpath = "(//div[@class=\"wd-dropdown-results wd-scroll wd-dropdown wd-opened\"])[1]")
+    private WebElement dropDownMenu;
+
+    @FindBy(xpath = "(//a[@title=\"Contul meu\"])[1]")
+    private WebElement contulMeuButton;
 
     @FindBy(css = "a[href=\"/categorie/fete/\"]")
     private WebElement descoperaColectiaButton;
@@ -35,7 +49,7 @@ public class HomePage {
     private WebElement searchBox;
 
     @FindBy(xpath = "(//button[@type=\"submit\"])[1]")
-    private WebElement searchButton;
+    private WebElement searchSubmitButton;
 
     @FindBy(css = "input[title=\"Cauta produse\"]:nth-of-type(1)")
     private WebElement searchBoxCSS;
@@ -86,11 +100,13 @@ public class HomePage {
         Assert.assertTrue("dashboard link is not visible ", favoritesLink.isDisplayed());
     }
 
-
-    public void clickOnMyAccountButton() {
+    public void clickOnMyAccountButton(){
         myAccountButton.click();
     }
+    public void clickOnNoutatiLink() {
+        noutatiLink.click();
 
+    }
     public void clickOnFavoriteButton() {
 
         favoritesLink.click();
@@ -114,7 +130,7 @@ public class HomePage {
     }
 
     public void clickSearch(){
-        searchButton.click();
+        searchSubmitButton.click();
     }
 
     public void insertKeywordInSearchBoxCSS(String pass) {
@@ -136,7 +152,51 @@ public class HomePage {
     public void clickSuggestion() {
         suggestionsDropdown.click();
     }
+    public void clickOnCautaProduseBox() {
+        cautaProduseInputOne.click();
+    }
 
+    public void checkSuggestionListIsVisible() {
+        Assert.assertTrue("The suggestion list is not visible on Home page ", dropDownMenu.isDisplayed());
+    }
+    public void completeSearchInputAndClickSearch() {
+        cautaProduseInputTwo.click();
+        cautaProduseInputTwo.sendKeys("rochie");
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        searchSubmitButton.click();
+    }
+
+    public void completeSearchInput2() {
+        cautaProduseInputTwo.sendKeys("rochie");
+        dropDownMenu.isDisplayed();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public void dropDownMenuIsVisible(String daniel) {
+        dropDownMenu.getAttribute("class");
+
+
+    }
+
+    public void clickOnContulMeuButton() {
+        contulMeuButton.click();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
     public void clickBaietiCategory() {
         baietiCategoryButton.click();
     }

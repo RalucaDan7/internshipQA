@@ -70,6 +70,40 @@ public class HomePageSteps extends BaseTest {
     public void clickOnContactButtonCss() {
         homePage.clickOnTheContactButtonCss();
     }
+    @When("Click on Noutati Button")
+    public void clickOnNoutatiButton() {
+        homePage.clickOnNoutatiLink();
+    }
+
+    @When("Click on Cauta produse box")
+    public void clickOnCautaProduseBox() {
+        homePage.clickOnCautaProduseBox();
+    }
+
+    @When("Type in rochie and click search")
+    public void completeSearchInputAndClickSearch() {
+        homePage.completeSearchInputAndClickSearch();
+
+
+    }
+
+    @When("Type in rochie")
+    public void completeSearch() {
+        homePage.completeSearchInput2();
+
+
+    }
+
+    @Then("A dropdown menu with the suggested results is displayed")
+    public void checkSuggestionList() {
+        homePage.checkSuggestionListIsVisible();
+
+    }
+
+    @When("The user clicks on Contul meu button")
+    public void clickOnContulMeuButton() {
+        homePage.clickOnContulMeuButton();
+    }
     @And("Insert {string} In Search Box")
     public void insertKeywordInSearchBox(String pass) {
 
