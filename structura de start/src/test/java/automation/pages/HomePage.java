@@ -1,6 +1,7 @@
 package automation.pages;
 
 import automation.base.DriverUtil;
+import automation.common.WaitUtils;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -65,7 +66,6 @@ public class HomePage {
     @FindBy(xpath = "(//div[@class=\"wrapper-content-banner wd-fill wd-items-bottom wd-justify-center\"])[2]")
     private WebElement baietiCategoryButton;
 
-
     @FindBy(css = "a[title=\"Cos de cumparaturi\"]")
     private WebElement cosDeCumparaturiLink;
 
@@ -77,7 +77,6 @@ public class HomePage {
 
     @FindBy(css = "a[href='/contact/']")
     private WebElement messageLinkCss;
-
 
     @FindBy(css = "li[id=\"menu-item-10614\"]")
     private WebElement accesoriiLinkMenu;
@@ -91,8 +90,11 @@ public class HomePage {
     @FindBy(css = "div[class=\"cart-widget-side wd-side-hidden wd-right\"]")
     private WebElement cosDeCumparaturiSidebarInchisElement;
 
-//    @FindBy (css= "nav>a[class=\"breadcrumb-link\"]:nth-child(1)")
-//    private WebElement primaPaginaLink;
+    //    @FindBy (css= "nav>a[class=\"breadcrumb-link\"]:nth-child(1)")
+    //    private WebElement primaPaginaLink;
+
+    @FindBy(xpath = "//div[@class=\"cookies-buttons\"]")
+    private WebElement acceptCookiesButton;
 
     public void checkFavoritesLinkIsVisible() {
         Assert.assertTrue("dashboard link is not visible ", favoritesLink.isDisplayed());
@@ -229,5 +231,9 @@ public class HomePage {
         messageLinkCss.click();
     }
 
+    public void acceptCookies() {
+        WaitUtils.waitForPageToLoad();
+        acceptCookiesButton.click();
+    }
 }
 
