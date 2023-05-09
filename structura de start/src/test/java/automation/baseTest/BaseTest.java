@@ -49,6 +49,8 @@ public class BaseTest {
 
     protected RalucaCartPage ralucaCartPage;
 
+    protected NoutatiFetePage noutatiFetePage;
+
 
     public void initPages(WebDriver driver) {
 
@@ -86,6 +88,8 @@ public class BaseTest {
         PageFactory.initElements(driver, cosDeCumparaturiPage);
         ralucaCartPage = new RalucaCartPage();
         PageFactory.initElements(driver, ralucaCartPage);
+        noutatiFetePage = new NoutatiFetePage();
+        PageFactory.initElements(driver, noutatiFetePage);
 
     }
 }

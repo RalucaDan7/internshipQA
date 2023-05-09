@@ -64,11 +64,14 @@ public class CostumeDeBaieFetePage {
         adaugaInCosButton.click();
     }
 
-    public void checkTheProductAndPrintThePrice(String costumDeBaieNume, String price) {
+    public void checkTheProductAndPrintThePrice(String costumDeBaieNume) {
         List<WebElement> listaProduse = DriverUtil.getDriver().findElements(By.cssSelector("h3.wd-entities-title a"));
-        if (listaProduse.contains(costumDeBaieNume)) {
-            System.out.println(price);
+        List<WebElement> listaPreturi = DriverUtil.getDriver().findElements(By.xpath("//h3[@class=\"wd-entities-title\"]/a/../../span/span/bdi"));
+        for (int i = 0; i < listaProduse.size(); i++) {
+            if (listaProduse.contains(costumDeBaieNume)) {
+                System.out.println(listaPreturi.get(i));
+                break;
+            }
         }
-
     }
 }

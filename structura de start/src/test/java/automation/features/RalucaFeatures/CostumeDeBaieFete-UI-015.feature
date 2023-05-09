@@ -14,7 +14,7 @@ Feature: AdaugareProduseCostumeDeBaieFeteCosDeCumparaturi-UI
     Then Click on Adauga in cos button
     And Click on Vezi cosul
     And Increment the quantity
-    And Check the quantity was increased by subtotalText
+    And Check the quantity was increased and the price is "458.00"
 
   @Tickbird-016 @Automation_Smoke @UI @Raluca
   Scenario: AdaugareProduseCosDeCumparaturi-UI-016-CheckTheQuantityWasIncreased - quantity value
@@ -24,11 +24,11 @@ Feature: AdaugareProduseCostumeDeBaieFeteCosDeCumparaturi-UI
     Then Click on Adauga in cos button
     And Click on Vezi cosul
     And Increment the quantity
-    And Check the quantity was increased by quantityValue
+    And Check the quantity was increased and in the card are "2" products
 
   @Tickbird-017 @Automation_Smoke @UI @Raluca
   Scenario: AdaugareProduseCosDeCumparaturi-UI-017-DisplayThePrice
-    Then Check "Costum de baie Happy Dots pentru fete" is displayed and print "229.00lei"
+    Then Check "Costum de baie Savannah pentru fete" is displayed and print the price
 
 
 

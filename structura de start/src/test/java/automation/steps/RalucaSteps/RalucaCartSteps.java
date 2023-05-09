@@ -14,13 +14,13 @@ public class RalucaCartSteps extends BaseTest {
         ralucaCartPage.incrementTheQuantity();
     }
 
-    @And("Check the quantity was increased by subtotalText")
-    public void checkTheQuantityBySubtotalText() {
-        ralucaCartPage.checkTheQuantityBySubtotalText();
+    @And("Check the quantity was increased and the price is {string}")
+    public void checkThePriceIsIncreased(String newPrice) {
+        ralucaCartPage.checkThePriceIsIncreased(newPrice);
     }
 
-    @And("Check the quantity was increased by quantityValue")
-    public void checkTheQuantityByQuantityValue() {
-        ralucaCartPage.checkTheQuantityByQuantityValue();
+    @And("Check the quantity was increased and in the card are {string} products")
+    public void checkTheQuantityWasIncreased(String productQuantity) {
+        ralucaCartPage.checkTheQuantityWasIncreased(productQuantity);
     }
 }

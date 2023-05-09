@@ -11,5 +11,7 @@ public class Constants {
 
     public static final String COSTUME_DE_BAIE_URL = "/categorie/fete/imbracaminte-fete/costume-de-baie/";
 
+    public static final String NOUTATI_FETE_URL = "/categorie/fete/imbracaminte-fete/costume-de-baie/";
+
 
 }

@@ -21,12 +21,12 @@ public class RalucaCartPage {
         incrementButton.click();
     }
 
-    public void checkTheQuantityBySubtotalText() {
-        Assert.assertTrue("The quantity was not increased", subtotalText.getText().contains("458.00"));
+    public void checkThePriceIsIncreased(String newPrice) {
+        Assert.assertTrue("The quantity was not increased", subtotalText.getText().contains(newPrice));
     }
 
-    public void checkTheQuantityByQuantityValue() {
-        WebElement quantityValue = DriverUtil.getDriver().findElement(By.xpath("//input[@id='quantity_6458f973e3659']"));
-        Assert.assertTrue("", quantityValue.getAttribute("value").contains("2"));
+    public void checkTheQuantityWasIncreased(String productQuantity) {
+        WebElement quantityValue = DriverUtil.getDriver().findElement(By.xpath("//input[@title='Cantitate']"));
+        Assert.assertTrue("The quantity was not increased", quantityValue.getAttribute("value").contains(productQuantity));
     }
 }
