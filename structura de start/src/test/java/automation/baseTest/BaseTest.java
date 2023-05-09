@@ -41,7 +41,6 @@ public class BaseTest {
 
     protected GirlsSectionPage girlsSectionPage;
 
-    protected ProductPage productPage;
 
     protected NewsPage newsPage;
 
