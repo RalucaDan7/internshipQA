@@ -116,5 +116,8 @@ public class HomePageSteps extends BaseTest {
         homePage.clickBaietiCategory();
     }
 
-
+    @And("Accepts cookies")
+    public void acceptCookies(){
+        homePage.acceptCookies();
+    }
 }
