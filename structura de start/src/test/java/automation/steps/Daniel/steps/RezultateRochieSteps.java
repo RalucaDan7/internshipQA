@@ -12,7 +12,7 @@ public class RezultateRochieSteps extends BaseTest {
         rezultateRochiePage.checkCautareRezultatePentruRochieIsVisible();
     }
 
-    @Then("Check {string} title is displayed")
+    @Then("Check {string} title is displayed in result page")
     public void checkCautareRezultatePentruRochieTileIsDisplayed(String gigi) {
         rezultateRochiePage.checkCautareRezultatePentruRochieTileIsDisplayed(gigi);
     }

@@ -32,7 +32,7 @@ Feature: Search-UI-Main Page
     When  Insert "w${#p2m1iu2%" Password And Click Submit
     And Click on Cauta produse box
     And Type in rochie and click search
-    Then Check "Căutare rezultate pentru rochie" title is displayed
+    Then Check "Căutare rezultate pentru rochie" title is displayed in result page
 
   @Tickbird-044 @Automation_Smoke @UI
   Scenario: Check page-UI-044-Check page by link
