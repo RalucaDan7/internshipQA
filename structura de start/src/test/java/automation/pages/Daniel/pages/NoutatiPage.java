@@ -1,4 +1,4 @@
-package automation.pages;
+package automation.pages.Daniel.pages;
 
 import automation.base.DriverUtil;
 import org.junit.Assert;

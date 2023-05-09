@@ -46,28 +46,9 @@ public class HomePageSteps extends BaseTest {
 
     }
 
-    @When("The user clicks on {string} button")
+    @When("The user clicks on Contul meu button")
     public void clickOnContulMeuButton() {
         homePage.clickOnContulMeuButton();
     }
 
-    @When("The {string} side menu is displayed")
-    public void seeAutentificareSideMenu() {
-        homePage.seeAutentificareSideMenu();
-    }
-
-    @When("The user inputs {string} email address")
-    public void inputEmailAddress(String user) {
-        homePage.inputEmailAddress(user);
-    }
-
-    @When("Inputs {string} password")
-    public void inputPassword(String parola) {
-        homePage.inputPassword(parola);
-    }
-
-    @When("Clicks on {string} button")
-    public void clickOnLogareButton() {
-        homePage.clickOnLogareButton();
-    }
 }

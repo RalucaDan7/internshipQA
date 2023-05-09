@@ -3,10 +3,11 @@ package automation.baseTest;
 
 import automation.pages.BasePage;
 import automation.pages.Daniel.pages.RezultateRochiePage;
+import automation.pages.Daniel.pages.SignInPage;
 import automation.pages.HomePage;
 import automation.base.DriverUtil;
 import automation.pages.LoginPage;
-import automation.pages.NoutatiPage;
+import automation.pages.Daniel.pages.NoutatiPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -26,6 +27,8 @@ public class BaseTest {
 
     protected RezultateRochiePage rezultateRochiePage;
 
+    protected SignInPage signInPage;
+
     public void initPages(WebDriver driver) {
 
         homePage = new HomePage();
@@ -38,5 +41,7 @@ public class BaseTest {
         PageFactory.initElements(driver, noutatiPage);
         rezultateRochiePage = new RezultateRochiePage();
         PageFactory.initElements(driver, rezultateRochiePage);
+        signInPage = new SignInPage();
+        PageFactory.initElements(driver, signInPage);
     }
 }
