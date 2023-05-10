@@ -22,7 +22,7 @@ public class HomePage {
     @FindBy(css = "a[href=\"https://qa-training.co.in/contul-meu/lost-password/\"]")
     private WebElement forgotPasswordLink;
     @FindBy(xpath = "(//span[contains(text(),'Noutati')])[1]")
-    private WebElement noutatiLink;
+    private WebElement noutatiDianaLink;
 
     @FindBy(xpath = "(//input[@title=\"Cauta produse\"])[1]")
     private WebElement cautaProduseInputOne;
@@ -77,6 +77,8 @@ public class HomePage {
 
     @FindBy(css = "a[href='/contact/']")
     private WebElement messageLinkCss;
+    @FindBy(xpath = "(//input[@title=\"Cauta produse\"])[1]")
+    private WebElement cautaProduseInput;
 
     @FindBy(css = "li[id=\"menu-item-10614\"]")
     private WebElement accesoriiLinkMenu;
@@ -89,6 +91,21 @@ public class HomePage {
 
     @FindBy(css = "div[class=\"cart-widget-side wd-side-hidden wd-right\"]")
     private WebElement cosDeCumparaturiSidebarInchisElement;
+    @FindBy(xpath = "(//span[@class=\"nav-link-text\"])[4]")
+    private WebElement noutatiLink;
+    @FindBy(xpath = "//h1[@class=\"entry-title title\"]")
+    private WebElement noutatiTitle;
+    @FindBy(xpath = "(//span[@class=\"nav-link-text\"])[3]")
+    private WebElement reduceriLink;
+    @FindBy(xpath = "(//button[@class=\"searchsubmit\"])[1]")
+    private WebElement searchDiana;
+    @FindBy(xpath = "(//div[@class=\"wd-dropdown-results wd-scroll wd-dropdown wd-opened\"])[1]")
+    private WebElement dropDianaDownMenu;
+    @FindBy(xpath= "//h1[@class=\"entry-title title\"]")
+    private WebElement bluzeTitle;
+
+    public HomePage() {
+    }
 
     //    @FindBy (css= "nav>a[class=\"breadcrumb-link\"]:nth-child(1)")
     //    private WebElement primaPaginaLink;
@@ -229,11 +246,30 @@ public class HomePage {
 
     public void clickOnTheContactButtonCss() {
         messageLinkCss.click();
+
     }
 
     public void acceptCookies() {
         WaitUtils.waitForPageToLoad();
         acceptCookiesButton.click();
     }
+    public void clickOnNoutatiLInk() {
+        noutatiLink.click();
+    }
+    public void clickOnReduceriLink() {
+        reduceriLink.click();
+    }
+    public void clickOnCautaProduseSearchBox() {
+        cautaProduseInput.click();
+    }
+    public void completeSearchInputAndClickSearch(String bluze) {
+        cautaProduseInput.sendKeys(bluze);
+        searchButton.click();
+
+    }
+    public void checkTitleApare(String floare) {
+        Assert.assertEquals("O disparut bluzele",floare, bluzeTitle.getText());
+    }
+
 }
 
