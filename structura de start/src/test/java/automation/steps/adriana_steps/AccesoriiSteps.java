@@ -1,4 +1,4 @@
-package automation.steps;
+package automation.steps.adriana_steps;
 
 
 import automation.baseTest.BaseTest;
@@ -10,9 +10,14 @@ import java.util.Map;
 
 public class AccesoriiSteps extends BaseTest {
 
-    @Then("A page containing {string} title is displayed")
+    @Then("A page containing {string} name is displayed")
     public void checkPageTitleIsDisplayed(String title) {
         accesoriiPage.checkAccesoriiTitle(title);
+    }
+
+    @Then("A page named {string} is displayed")
+    public void checkPageTitleDropdownIsDisplayed(String title) {
+        accesoriiPage.checkDropdownItemTitle(title);
     }
 
     @Then("A dropdown menu containing the following items is displayed")
@@ -23,9 +28,6 @@ public class AccesoriiSteps extends BaseTest {
         }
     }
 
-    @Then("A page named {string} is displayed")
-    public void checkPageTitleDropdownIsDisplayed(String title) {
-        accesoriiPage.checkDropdownItemTitle(title);
-    }
+
 
 }
