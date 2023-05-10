@@ -16,10 +16,10 @@ public class ContactPage {
     public void checkContactTitle(String nume) {
         Assert.assertEquals("The title of the page is not correct ", nume, ContactEntryTitle.getText());
     }
-
-    public void checkContactTitleDiana(String nume) {
-        Assert.assertTrue("The title of the page is not correct ", ContactTitle.isDisplayed());
-    }
+//
+//    public void checkContactTitleDiana(String nume) {
+//        Assert.assertTrue("The title of the page is not correct ", ContactTitle.isDisplayed());
+//    }
 
     public void checkContactTitleCss(String name) {
         Assert.assertEquals("The title of the page is not correct ", name, ContactEntryTitleCss.getText());

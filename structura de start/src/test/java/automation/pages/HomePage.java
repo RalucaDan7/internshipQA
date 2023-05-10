@@ -22,7 +22,7 @@ public class HomePage {
     @FindBy(css = "a[href=\"https://qa-training.co.in/contul-meu/lost-password/\"]")
     private WebElement forgotPasswordLink;
     @FindBy(xpath = "(//span[contains(text(),'Noutati')])[1]")
-    private WebElement noutatiLink;
+    private WebElement noutatiDianaLink;
 
     @FindBy(xpath = "(//input[@title=\"Cauta produse\"])[1]")
     private WebElement cautaProduseInputOne;
@@ -98,9 +98,9 @@ public class HomePage {
     @FindBy(xpath = "(//span[@class=\"nav-link-text\"])[3]")
     private WebElement reduceriLink;
     @FindBy(xpath = "(//button[@class=\"searchsubmit\"])[1]")
-    private WebElement searchButton;
+    private WebElement searchDiana;
     @FindBy(xpath = "(//div[@class=\"wd-dropdown-results wd-scroll wd-dropdown wd-opened\"])[1]")
-    private WebElement dropDownMenu;
+    private WebElement dropDianaDownMenu;
     @FindBy(xpath= "//h1[@class=\"entry-title title\"]")
     private WebElement bluzeTitle;
 

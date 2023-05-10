@@ -1,12 +1,11 @@
 package automation.pages.dianapages;
 
-import automation.base.DriverUtil;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 
-public class NoutatiPage {
+public class NoutatiDianaPage {
 
 
     @FindBy(xpath = "//h1[@class=\"entry-title title\"]")

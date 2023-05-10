@@ -8,9 +8,9 @@ import automation.pages.Daniel.pages.SignInPage;
 import automation.pages.LoginPage;
 import automation.pages.TecsaPages.*;
 import automation.pages.Daniel.pages.NoutatiPage;
+import automation.pages.dianapages.NoutatiDianaPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import automation.pages.dianapages.NoutatiPage;
 import automation.pages.dianapages.ReduceriPage;
 import automation.pages.octavian_pages.BaietiCategoryPage;
 import automation.pages.octavian_pages.CartPage;
@@ -29,7 +29,7 @@ public class BaseTest {
 
     protected HomePage homePage;
     protected ReduceriPage reduceriPage;
-    protected NoutatiPage noutatiPage;
+    protected NoutatiDianaPage noutatiDianaPage;
     protected BasePage basePage;
 
     protected LoginPage loginPage;
@@ -84,8 +84,8 @@ public class BaseTest {
 
         homePage = new HomePage();
         PageFactory.initElements(driver, homePage);
-        noutatiPage = new NoutatiPage();
-        PageFactory.initElements(driver, noutatiPage);
+        noutatiDianaPage = new NoutatiDianaPage();
+        PageFactory.initElements(driver, noutatiDianaPage);
         rezultateRochiePage = new RezultateRochiePage();
         PageFactory.initElements(driver, rezultateRochiePage);
         signInPage = new SignInPage();
