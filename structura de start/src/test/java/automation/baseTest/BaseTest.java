@@ -3,6 +3,8 @@ package automation.baseTest;
 
 import automation.pages.*;
 import automation.base.DriverUtil;
+import automation.pages.dianapages.NoutatiPage;
+import automation.pages.dianapages.ReduceriPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -14,6 +16,8 @@ public class BaseTest {
     }
 
     protected HomePage homePage;
+    protected ReduceriPage reduceriPage;
+    protected NoutatiPage noutatiPage;
     protected BasePage basePage;
 
     protected LoginPage loginPage;
@@ -43,6 +47,10 @@ public class BaseTest {
         PageFactory.initElements(driver, cosDeCumparaturiPage);
         magazinPage = new MagazinPage();
         PageFactory.initElements(driver, magazinPage);
+        noutatiPage = new NoutatiPage();
+        PageFactory.initElements(driver, noutatiPage);
+        reduceriPage= new ReduceriPage();
+        PageFactory.initElements(driver, reduceriPage);
 
     }
 }

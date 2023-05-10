@@ -1,6 +1,7 @@
 package automation.pages;
 
 import automation.base.DriverUtil;
+import cucumber.api.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,6 +27,8 @@ public class HomePage {
 
     @FindBy(css = "a[href='/contact/']")
     private WebElement messageLinkCss;
+    @FindBy(xpath = "(//input[@title=\"Cauta produse\"])[1]")
+    private WebElement cautaProduseInput;
 
 
     @FindBy(css = "li[id=\"menu-item-10614\"]")
@@ -39,6 +42,21 @@ public class HomePage {
 
     @FindBy(css = "div[class=\"cart-widget-side wd-side-hidden wd-right\"]")
     private WebElement cosDeCumparaturiSidebarInchisElement;
+    @FindBy(xpath = "(//span[@class=\"nav-link-text\"])[4]")
+    private WebElement noutatiLink;
+    @FindBy(xpath = "//h1[@class=\"entry-title title\"]")
+    private WebElement noutatiTitle;
+    @FindBy(xpath = "(//span[@class=\"nav-link-text\"])[3]")
+    private WebElement reduceriLink;
+    @FindBy(xpath = "(//button[@class=\"searchsubmit\"])[1]")
+    private WebElement searchButton;
+    @FindBy(xpath = "(//div[@class=\"wd-dropdown-results wd-scroll wd-dropdown wd-opened\"])[1]")
+    private WebElement dropDownMenu;
+    @FindBy(xpath= "//h1[@class=\"entry-title title\"]")
+    private WebElement bluzeTitle;
+
+    public HomePage() {
+    }
 
     public void checkFavoritesLinkIsVisible() {
         Assert.assertTrue("dashboard link is not visible ", favoritesLink.isDisplayed());
@@ -79,7 +97,27 @@ public class HomePage {
 
     public void clickOnTheContactButtonCss() {
         messageLinkCss.click();
+
     }
 
-}
+    public void clickOnNoutatiLInk() {
+        noutatiLink.click();
+    }
+    public void clickOnReduceriLink() {
+        reduceriLink.click();
+    }
+    public void clickOnCautaProduseSearchBox() {
+        cautaProduseInput.click();
+    }
+        public void completeSearchInputAndClickSearch(String bluze) {
+        cautaProduseInput.sendKeys(bluze);
+        searchButton.click();
+
+        }
+    public void checkTitleApare(String floare) {
+        Assert.assertEquals("O disparut bluzele",floare, bluzeTitle.getText());
+    }
+
+    }
+
 

@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class BaseSteps extends BaseTest {
 
-    @Then("Check {string} page is displayed")
+    @Then("Check {string} page is displayed 1")
     public void checkPageIsDisplayed(String pageName, DataTable data) {
         Map<String, String> dataMap = data.asMap(String.class, String.class);
         basePage.checkPageIsDisplayed(pageName, dataMap.get("url"));

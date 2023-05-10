@@ -52,4 +52,26 @@ public class HomePageSteps extends BaseTest {
     public void clickOnContactButtonCss() {
         homePage.clickOnTheContactButtonCss();
     }
-}
+    @When("Click on noutati link")
+    public void clickOnNoutatiLink() {
+        homePage.clickOnNoutatiLInk();
+
+    }
+    @And("Click on reduceri link")
+    public void clickOnReduceriLink(){
+        homePage.clickOnReduceriLink();
+
+    }
+    @And("Click on Cauta produse search box")
+    public void clickOnCautaProduseSearchBox() {
+        homePage.clickOnCautaProduseSearchBox();
+    }
+    @Then("Type in {string} and submit")
+    public void completeSearchInputAndClickSearch(String bluze) {
+        homePage.completeSearchInputAndClickSearch(bluze);
+    }
+    @Then("Check title {string} apare")
+    public void checkTitleApare(String floricica) {
+        homePage.checkTitleApare(floricica);
+    }
+    }
