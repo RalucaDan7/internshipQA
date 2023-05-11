@@ -6,9 +6,9 @@ Feature: AdaugareProduseBluzeSiHanoraceFeteCosDeCumparaturi-UI
     When  Insert "w${#p2m1iu2%" Password And Click Submit
 
 
-  @Tickbird-013 @Automation_Smoke @UI @Raluca
+  @Tickbird-018 @Automation_Smoke @UI @Raluca
   Scenario: NoutatiFete-UI-018-Click the product
-    When Click on "masina cu telecomanda"
+    Then Click on "Slapi roz pentru fete" title from noutatiFetePage
 
 
 

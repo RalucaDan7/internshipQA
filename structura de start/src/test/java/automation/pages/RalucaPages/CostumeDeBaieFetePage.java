@@ -67,11 +67,17 @@ public class CostumeDeBaieFetePage {
     public void checkTheProductAndPrintThePrice(String costumDeBaieNume) {
         List<WebElement> listaProduse = DriverUtil.getDriver().findElements(By.cssSelector("h3.wd-entities-title a"));
         List<WebElement> listaPreturi = DriverUtil.getDriver().findElements(By.xpath("//h3[@class=\"wd-entities-title\"]/a/../../span/span/bdi"));
-        for (int i = 0; i < listaProduse.size(); i++) {
-            if (listaProduse.contains(costumDeBaieNume)) {
-                System.out.println(listaPreturi.get(i));
+        int count = 0;
+        boolean check = false;
+        for (WebElement produs : listaProduse) {
+            if (produs.getText().contains(costumDeBaieNume)) {
+                System.out.println(listaPreturi.get(count).getText());
+                check = true;
                 break;
             }
+            count++;
+
         }
+       Assert.assertTrue("The product is not on the page",check);
     }
 }
