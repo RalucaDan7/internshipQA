@@ -5,21 +5,16 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
 
 
 import java.util.List;
 
 public class NoutatiFetePage {
-
-
     public void clickOnProductRaluca(String productName) {
-        boolean butonInvizibil = false;
         boolean condition = true;
         JavascriptExecutor js = (JavascriptExecutor) DriverUtil.getDriver();
-        while (condition == true) {
+        while (condition) {
             List<WebElement> listaProduse = DriverUtil.getDriver().findElements(By.cssSelector("h3.wd-entities-title a"));
             for (int i = 0; i < listaProduse.size(); i++) {
                 if (listaProduse.get(i).getText().contains(productName)) {

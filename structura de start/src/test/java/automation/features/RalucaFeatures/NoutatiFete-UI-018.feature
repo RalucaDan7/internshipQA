@@ -1,4 +1,4 @@
-Feature: AdaugareProduseBluzeSiHanoraceFeteCosDeCumparaturi-UI
+Feature: ClickPeProduseSiPeLoadMoreButton-UI
 
 
   Background:
