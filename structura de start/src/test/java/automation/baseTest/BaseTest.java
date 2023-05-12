@@ -18,10 +18,7 @@ import automation.pages.octavian_pages.CartPage;
 import automation.pages.octavian_pages.ProductOctavianPage;
 import automation.pages.octavian_pages.SearchPage;
 import automation.pages.adriana_pages.*;
-import automation.pages.RalucaPage.BluzeSiHanoraceFetePage;
-import automation.pages.RalucaPage.CostumeDeBaieFetePage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
+
 
 
 public class BaseTest {
