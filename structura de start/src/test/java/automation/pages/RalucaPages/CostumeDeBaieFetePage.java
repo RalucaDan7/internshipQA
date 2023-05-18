@@ -20,7 +20,6 @@ public class CostumeDeBaieFetePage {
         WebElement title = DriverUtil.getDriver().findElement(By.cssSelector(".entry-title.title"));
         WaitUtils.waitForVisibilityOfElement(DriverUtil.getDriver(), title);
         List<WebElement> listaProduse = DriverUtil.getDriver().findElements(By.cssSelector("h3.wd-entities-title a"));
-
         JavascriptExecutor js = (JavascriptExecutor) DriverUtil.getDriver();
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
         for (WebElement element : listaProduse) {

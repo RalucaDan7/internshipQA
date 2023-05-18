@@ -11,6 +11,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -18,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 public final class WebDriverUtil extends DriverUtil {
 
     public WebDriver initWebDriver(Scenario scenario)  {
-        MutableCapabilities options = setupMutableCapabilities(scenario, getBuildNumber());
+        MutableCapabilities options = setupMutableCapabilitiesForChrome(scenario, getBuildNumber());
         switch (ConfigManager.getBrowser().toLowerCase()) {
             case "chrome":
                 switch (ConfigManager.getExecution().toLowerCase()) {
@@ -28,6 +29,22 @@ public final class WebDriverUtil extends DriverUtil {
                         System.setProperty("webdriver.chrome.silentOutput", "true");
                         WebDriverManager.chromedriver().setup();
                         tlDriver.set(new ChromeDriver((ChromeOptions) options));
+                        break;
+                    default: {
+                        System.out.println("No info for driver.");
+                        break;
+                    }
+                }
+                break;
+            case "firefox":
+                MutableCapabilities optionsFirefox = setupMutableCapabilitiesForFirefox(scenario, getBuildNumber());
+                switch (ConfigManager.getExecution().toLowerCase()) {
+                    case "jenkins":
+                        break;
+                    case "local":
+                        System.setProperty("webdriver.firefox.silentOutput", "true");
+                        WebDriverManager.firefoxdriver().setup();
+                        tlDriver.set(new FirefoxDriver());
                         break;
                     default: {
                         System.out.println("No info for driver.");
@@ -50,9 +67,15 @@ public final class WebDriverUtil extends DriverUtil {
             return tlDriver.get();
     }
 
-    private MutableCapabilities setupMutableCapabilities(Scenario scenario, String buildnr) {
+    private MutableCapabilities setupMutableCapabilitiesForChrome(Scenario scenario, String buildnr) {
         MutableCapabilities options;
         ChromeOptions optionsChrome = new ChromeOptions();
+        optionsChrome.addArguments("--incognito");
+        optionsChrome.addArguments("start-maximized");
+        optionsChrome.setExperimentalOption("excludeSwitches",
+                Arrays.asList("disable-popup-blocking"));
+
+
 
         Map<String, Object> prefs = new HashMap<>();
         Map<String, Object> profile = new HashMap<>();
@@ -62,6 +85,21 @@ public final class WebDriverUtil extends DriverUtil {
 
         optionsChrome.setCapability(ChromeOptions.CAPABILITY, optionsChrome);
         options = setWebDriverOptions(optionsChrome, scenario, buildnr);   //set the aws_proxy_muc
+        return options;
+    }
+
+    private MutableCapabilities setupMutableCapabilitiesForFirefox(Scenario scenario, String buildnr) {
+        MutableCapabilities options;
+        FirefoxOptions optionsFirefox = new FirefoxOptions();
+
+        Map<String, Object> prefs = new HashMap<>();
+        Map<String, Object> profile = new HashMap<>();
+
+        prefs.put("profile", profile);
+//        optionsFirefox.setExperimentalOption("prefs", prefs);
+
+        optionsFirefox.setCapability(FirefoxOptions.FIREFOX_OPTIONS, optionsFirefox);
+        options = setWebDriverOptions(optionsFirefox, scenario, buildnr);   //set the aws_proxy_muc
         return options;
     }
 

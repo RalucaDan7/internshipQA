@@ -82,6 +82,7 @@ public class BaseTest {
 
     protected NoutatiFetePage noutatiFetePage;
 
+    protected SearchTheProductPage rochieSunPowerFetePage;
 
 
     public void initPages(WebDriver driver) {
@@ -147,5 +148,8 @@ public class BaseTest {
         PageFactory.initElements(driver, noutatiPage);
         reduceriPage= new ReduceriPage();
         PageFactory.initElements(driver, reduceriPage);
+
+        rochieSunPowerFetePage= new SearchTheProductPage();
+        PageFactory.initElements(driver, rochieSunPowerFetePage);
     }
 }
