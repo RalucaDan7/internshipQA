@@ -16,6 +16,8 @@ public class Constants {
 
     public static final String ROCHIE_SUN_POWER_PENTRU_FETE_URL = "/produs/rochie-sun-power-pentru-fete/";
 
+    public static final String COREUIREACT_URL = "http://localhost/#/dashboard";
+
 
 
 }

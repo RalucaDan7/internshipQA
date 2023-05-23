@@ -84,6 +84,8 @@ public class BaseTest {
 
     protected SearchTheProductPage rochieSunPowerFetePage;
 
+    protected CoreUIReactPage coreUIReactPage;
+
 
     public void initPages(WebDriver driver) {
 
@@ -151,5 +153,8 @@ public class BaseTest {
 
         rochieSunPowerFetePage= new SearchTheProductPage();
         PageFactory.initElements(driver, rochieSunPowerFetePage);
+
+        coreUIReactPage= new CoreUIReactPage();
+        PageFactory.initElements(driver, coreUIReactPage);
     }
 }

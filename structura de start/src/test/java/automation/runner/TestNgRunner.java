@@ -1,10 +1,9 @@
 package automation.runner;
 
 import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
-import org.junit.runner.RunWith;
+import cucumber.api.testng.AbstractTestNGCucumberTests;
+import org.testng.annotations.DataProvider;
 
-@RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/java/automation/features",
         glue = {"automation"},
@@ -12,5 +11,10 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber-reports/cucumber.json",
                 "html:target/cucumber-reports/cucumber.html"}
 )
-public class TestRunFeatures {
+public class TestNgRunner extends AbstractTestNGCucumberTests {
+    @Override
+    @DataProvider(parallel = true)
+    public  Object[][] scenarios(){
+        return super.scenarios();
+    }
 }

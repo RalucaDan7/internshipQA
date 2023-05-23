@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
 
@@ -71,9 +72,16 @@ public final class WebDriverUtil extends DriverUtil {
         MutableCapabilities options;
         ChromeOptions optionsChrome = new ChromeOptions();
         optionsChrome.addArguments("--incognito");
-        optionsChrome.addArguments("start-maximized");
+//        optionsChrome.addArguments("--start-maximized");
         optionsChrome.setExperimentalOption("excludeSwitches",
                 Arrays.asList("disable-popup-blocking"));
+//        optionsChrome.addArguments("--headless");
+        optionsChrome.addArguments("--disable-infobars");
+        optionsChrome.addArguments("--disable-cache");
+        optionsChrome.addArguments("--window-size=400,800");
+        optionsChrome.addArguments("--version");
+        optionsChrome.addArguments("--ignore-certificate-errors");
+        optionsChrome.addArguments("--disable-web-security");
 
 
 

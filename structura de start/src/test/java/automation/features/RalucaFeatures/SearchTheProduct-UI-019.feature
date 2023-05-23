@@ -10,6 +10,16 @@ Feature: SearchTheProduct-UI
     And Input the value in the search box
     And Check the product is displayed
 
+  @Tickbird-020 @Automation_Smoke @UI @Raluca1
+  Scenario: SearchTheProduct-UI-020-Search the price
+    Then Take the price and return its value
+    And Input the price in the search box
+    Then Take the price and return its value - integer
+    And Input the price in the search box - integer
+    Then Take the price and return its value - float
+    And Input the price in the search box - float
+
+
 
 
 
