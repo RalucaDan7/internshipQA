@@ -18,7 +18,7 @@ public class BluzeSiHanoraceFetePage {
     private WebElement hanoracMulticolorBumbacPentruCopiiText;
     @FindBy(xpath="(//a[@href=\"https://qa-training.co.in/produs/hanorac-namina-pentru-fete/\"])[5]")
     private WebElement hanoracNaminaPentruFeteText;
-    @FindBy(xpath = "h3.wd-entities-title a")
+    @FindBy(css = "h3.wd-entities-title a")
     private List <WebElement> bluzeSiHanoraceList;
 
     @FindBy(xpath = "(//a[@class='product-image-link'])[1]")

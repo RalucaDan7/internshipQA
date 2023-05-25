@@ -13,6 +13,8 @@ public class ConfigManager {
     private static final String path;
     private static String browser;
     private static String baseUrl;
+
+    private static String baseCoreUIUrl;
     private static final String execution;
     private static String confFile;
     private static final String platform;
@@ -23,6 +25,7 @@ public class ConfigManager {
         platform = System.getProperty("testautomation.platform");;
         browser = System.getProperty("testautomation.browser");
         execution = System.getProperty("testautomation.execution");
+        baseCoreUIUrl = System.getProperty("testautomation.baseCoreUIUrl");
     }
 
     private static String loadSystemProperties() {
@@ -76,7 +79,13 @@ public class ConfigManager {
         }
         return baseUrl;
     }
-
+    public static String getBaseCoreUIUrl() {
+        if (baseCoreUIUrl == null || baseCoreUIUrl.isEmpty()) {
+            System.out.println("The base url of the target test application was not specified or is empty in " + confFile);
+            System.exit(0);
+        }
+        return baseCoreUIUrl;
+    }
     public static String getExecution() {
         if (execution == null || execution.isEmpty()) {
             System.out.println("Execution is not provided in " + confFile);

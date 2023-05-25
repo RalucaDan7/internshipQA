@@ -12,7 +12,7 @@ import cucumber.api.java.en.When;
 public class CoreUIReactSteps extends BaseTest {
     @Given("The user navigates to CoreUIReact page")
     public void userNavigatesToCoreUIReactPage() {
-        DriverUtil.getDriver().get(Constants.COREUIREACT_URL);
+        DriverUtil.getDriver().get(Constants.BASE_CORE_UI_URL + Constants.CORE_UI_REACT_DASHBORD_URL);
         WaitUtils.waitForPageToLoad();
     }
 
@@ -30,5 +30,49 @@ public class CoreUIReactSteps extends BaseTest {
         coreUIReactPage.clickOnStatus(status);
     }
 
+    @When("Click on Base section")
+    public void clickOnBase() {
+        coreUIReactPage.clickOnBase();
+    }
+
+    @Then("Click on Cards")
+    public void clickOnCards() {
+        coreUIReactPage.clickOnCards();
+    }
+
+    @And("Check Card actions is displayed")
+    public void checkCardsActionsIsDisplayed() {
+        coreUIReactPage.checkCardsActionsIsDisplayed();
+    }
+
+    @And("Check Lorem ipsum text is displayed")
+    public void checkLoremIpsumTextIsDisplayed() {
+        coreUIReactPage.checkLoremIpsumTextIsDisplayed();
+    }
+
+    @And("Click on arrow sign")
+    public void clickOnArrowSign() {
+        coreUIReactPage.clickOnArrowSign();
+    }
+
+    @And("Check if Lorem ipsum text is not displayed after clicking arrow sign")
+    public void checkTextAfterClickingOnArrowSign() {
+        coreUIReactPage.checkTextAfterClickingOnArrowSign();
+    }
+
+    @And("Click on x sign")
+    public void clickOnXSign() {
+        coreUIReactPage.clickOnXSign();
+    }
+
+    @And("Check if the card is displayed")
+    public void checkTheCard() {
+        coreUIReactPage.checkTheCard();
+    }
+
+    @And("Check if the card is displayed after refreshing the page")
+    public void checkTheCardAfterRefresh() {
+        coreUIReactPage.checkTheCardAfterRefresh();
+    }
 
 }
