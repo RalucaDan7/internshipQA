@@ -6,7 +6,6 @@ import cucumber.api.java.en.Then;
 import io.cucumber.datatable.DataTable;
 
 import java.util.List;
-import java.util.Map;
 
 public class FavoriteSteps extends BaseTest {
 

@@ -2,12 +2,8 @@ package automation.pages.Daniel.pages;
 
 import automation.base.DriverUtil;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import java.security.PublicKey;
 
 public class NoutatiPage {
     @FindBy(css = "h1[class=\"entry-title title\"]")

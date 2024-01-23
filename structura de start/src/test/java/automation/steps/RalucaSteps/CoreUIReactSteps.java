@@ -20,6 +20,7 @@ public class CoreUIReactSteps extends BaseTest {
     public void clickOnUsers() {
         coreUIReactPage.clickOnUsers();
     }
+
     @Then("Check the user page is displayed")
     public void checkUserPageIsDisplayed() {
         coreUIReactPage.checkUserPageIsDisplayed();
@@ -75,4 +76,55 @@ public class CoreUIReactSteps extends BaseTest {
         coreUIReactPage.checkTheCardAfterRefresh();
     }
 
+    @When("Click on Notification section")
+    public void clickOnNotification() {coreUIReactPage.clickOnNotification();}
+
+    @Then("Click on Modal")
+    public void clickOnModal() {
+        coreUIReactPage.clickOnModal();
+    }
+
+    @And("Click on cancel button")
+    public void clickOnCancelButton() {
+        coreUIReactPage.clickOnCancelButton();
+    }
+
+    @And("Click on Primary, Warning and Info modal")
+    public void clickOnPrimaryWarningInfoModal() {
+        coreUIReactPage.clickOnPrimaryWarningInfoModal();
+    }
+
+    @When("Click on Pages")
+    public void clickOnPages() {
+        coreUIReactPage.clickOnPages();
+    }
+
+    @Then("Click on Login")
+    public void clickOnLogin() {
+        coreUIReactPage.clickOnLogin();
+    }
+
+    @And("Check username and password is displayed")
+    public void checkUsernameAndPasswordIsDisplayed() {
+        coreUIReactPage.checkUsernameAndPasswordIsDisplayed();
+    }
+
+    @And("Input {string} as username and {string} as password")
+    public void inputUsernameAndPassword(String username, String password) {
+        coreUIReactPage.inputUsernameAndPassword(username, password);
+    }
+    @And("Check login button is blue")
+    public void checkLoginButtonColor() {
+        coreUIReactPage.checkLoginButtonColor();
+    }
+
+    @And("Input the button text as username")
+    public void inputTheButtonTextAsUsername() {
+        coreUIReactPage.inputTheButtonTextAsUsername();
+    }
+
+    @Then("Display the name and the registered date of {string} with {string} status")
+    public void displayTheNameAndTheRegisteredDate(String role, String status) {
+        coreUIReactPage.displayTheNameAndTheRegisteredDate(role, status);
+    }
 }

@@ -145,15 +145,12 @@ public class BaseTest {
         PageFactory.initElements(driver, ralucaCartPage);
         noutatiFetePage = new NoutatiFetePage();
         PageFactory.initElements(driver, noutatiFetePage);
-
         noutatiPage = new NoutatiPage();
         PageFactory.initElements(driver, noutatiPage);
         reduceriPage= new ReduceriPage();
         PageFactory.initElements(driver, reduceriPage);
-
         rochieSunPowerFetePage= new SearchTheProductPage();
         PageFactory.initElements(driver, rochieSunPowerFetePage);
-
         coreUIReactPage= new CoreUIReactPage();
         PageFactory.initElements(driver, coreUIReactPage);
     }

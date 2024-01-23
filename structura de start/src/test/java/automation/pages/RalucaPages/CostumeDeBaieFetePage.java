@@ -8,8 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
-
 import java.util.List;
 
 
@@ -31,7 +29,6 @@ public class CostumeDeBaieFetePage {
                 break;
             }
         }
-
         if (value == false) {
             System.out.println(costumeDeBaieNume + "is not on this page");
         }
@@ -75,8 +72,7 @@ public class CostumeDeBaieFetePage {
                 break;
             }
             count++;
-
         }
-       Assert.assertTrue("The product is not on the page",check);
+        Assert.assertTrue("The product is not on the page", check);
     }
 }

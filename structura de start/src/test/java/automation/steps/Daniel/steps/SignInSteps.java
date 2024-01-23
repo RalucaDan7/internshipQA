@@ -3,7 +3,6 @@ package automation.steps.Daniel.steps;
 import automation.baseTest.BaseTest;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 

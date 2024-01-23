@@ -1,9 +1,6 @@
 package automation.steps.TecsaSteps;
 
-import automation.base.DriverUtil;
 import automation.baseTest.BaseTest;
-import automation.common.Constants;
-import automation.common.WaitUtils;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;

@@ -4,7 +4,6 @@ import automation.base.DriverUtil;
 import automation.baseTest.BaseTest;
 import automation.common.Constants;
 import automation.common.WaitUtils;
-import automation.pages.RalucaPages.NoutatiFetePage;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 

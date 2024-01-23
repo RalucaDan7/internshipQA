@@ -43,6 +43,36 @@ public class CoreUIReactPage {
     @FindBy(xpath = "(//a[@class='card-header-action'])[4]")
     private WebElement xSignButton;
 
+    @FindBy(xpath = "//a[contains(text(),'Notifications')]")
+    private WebElement notificationButton;
+
+    @FindBy(xpath = "//a[contains(text(),'Modal')]")
+    private WebElement modalButton;
+
+    @FindBy(xpath = "//button[contains(text(),'Cancel')]")
+    private List<WebElement> modalCancelButtonList;
+
+    @FindBy(xpath = "(//button[contains(text(),'Cancel')])[1]")
+    private WebElement cancelButton;
+
+    @FindBy(css = "button[class*=\"mr-1 btn btn\"]")
+    private List<WebElement> modalButtonsList;
+
+
+    @FindBy(xpath = "//a[contains(text(),'Pages')]")
+    private WebElement pagesButton;
+
+    @FindBy(xpath = "//a[contains(text(),'Login')]")
+    private WebElement loginButton;
+
+    @FindBy(xpath = "//button[contains(text(),'Login')]")
+    private WebElement loginButtonFromLoginPage;
+
+    @FindBy(css = "input[type=\"text\"]")
+    private WebElement usernameField;
+    @FindBy(css = "input[type=\"password\"]")
+    private WebElement passwordField;
+
 
     public void clickOnUsers() {
         usersButton.click();
@@ -109,15 +139,96 @@ public class CoreUIReactPage {
 
     public void checkTheCard() {
         WebElement cardActionsDiv = DriverUtil.getDriver().findElement(By.xpath("//div[@class='fade']"));
-        Assert.assertFalse("The div is displayed and it should not be",cardActionsDiv.getAttribute("class").contains("show"));
+        Assert.assertFalse("The div is displayed and it should not be", cardActionsDiv.getAttribute("class").contains("show"));
     }
 
     public void checkTheCardAfterRefresh() {
         DriverUtil.getDriver().navigate().refresh();
         WebElement cardActionsDiv = DriverUtil.getDriver().findElement(By.xpath("//div[@class='fade show']"));
-        Assert.assertTrue("The div is not displayed and it should not be",cardActionsDiv.getAttribute("class").contains("show"));
+        Assert.assertTrue("The div is not displayed and it should not be", cardActionsDiv.getAttribute("class").contains("show"));
     }
 
+    public void clickOnNotification() {
+        notificationButton.click();
+    }
+
+    public void clickOnModal() {
+        modalButton.click();
+    }
+
+    public void clickOnCancelButton() {
+        cancelButton.click();
+    }
+
+    public void clickOnPrimaryWarningInfoModal() {
+        for (int i = 0; i < modalButtonsList.size(); i += 2) {
+            modalButtonsList.get(i).click();
+            modalCancelButtonList.get(3 + i).click();
+        }
+    }
+    public void clickOnPages() {
+        Actions action = new Actions(DriverUtil.getDriver());
+        action.moveToElement(pagesButton).click().build().perform();
+    }
+
+    public void clickOnLogin() {
+        WaitUtils.waitForVisibilityOfElement(DriverUtil.getDriver(), loginButton);
+        loginButton.click();
+    }
+
+    public void checkUsernameAndPasswordIsDisplayed() {
+        Assert.assertTrue("Username is not displayed", usernameField.getAttribute("placeholder").contains("Username"));
+        Assert.assertTrue("Password is not displayed", passwordField.getAttribute("placeholder").contains("Password"));
+    }
+
+    public void inputUsernameAndPassword(String username, String password) {
+        usernameField.click();
+        usernameField.sendKeys(username);
+        passwordField.click();
+        passwordField.sendKeys(password);
+    }
+
+    public void checkLoginButtonColor() {
+        String rgbaButtonColor = loginButtonFromLoginPage.getCssValue("background-color").trim();
+        Assert.assertTrue("The button is not blue", rgbaButtonColor.contains("rgba(50, 31, 219, 1)"));
+
+        String[] color = rgbaButtonColor.replace("rgba(", "").split(",");
+        String hex = String.format("#%02x%02x%02x", Integer.parseInt(color[0].trim()), Integer.parseInt(color[1].trim()), Integer.parseInt(color[2].trim()));
+        Assert.assertTrue("The button is not blue", hex.contains("#321fdb"));
+    }
+
+    public void inputTheButtonTextAsUsername() {
+        usernameField.click();
+        usernameField.clear();
+        String loginButtonText = loginButtonFromLoginPage.getText();
+        usernameField.sendKeys(loginButtonText);
+    }
+
+    public void displayTheNameAndTheRegisteredDate(String role, String status) {
+        boolean condition = false;
+        int loadNextPage = 0;
+        while (loadNextPage <= pageNumberButtons.size()) {
+            List<WebElement> nameList = DriverUtil.getDriver().findElements(By.xpath("//tr/td[1]"));
+            List<WebElement> registeredDateList = DriverUtil.getDriver().findElements(By.xpath("//tr/td[2]"));
+            List<WebElement> roleList = DriverUtil.getDriver().findElements(By.xpath("//tr/td[3]"));
+            List<WebElement> statusTextList = DriverUtil.getDriver().findElements(By.xpath("//td/span"));
+            for (int i = 0; i < roleList.size(); i++) {
+                if (roleList.get(i).getText().equals(role) && statusTextList.get(i).getText().equals(status)) {
+                    System.out.println("The person with " + role + " role and " + status + " status is " + nameList.get(i).getText()
+                            + " and his registered date is " + registeredDateList.get(i).getText());
+                    condition = true;
+                }
+            }
+            if (loadNextPage < pageNumberButtons.size()) {
+                pageNumberButtons.get(loadNextPage).click();
+            }
+            loadNextPage++;
+        }
+        Assert.assertTrue("The user doesn't exist", condition);
+    }
 }
+
+
+
 
 

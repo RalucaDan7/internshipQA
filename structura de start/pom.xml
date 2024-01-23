@@ -37,7 +37,7 @@
                         </includes>
                         <properties><property>
                             <name>dataproviderthreadcount</name>
-                            <value>2</value>
+                            <value>3</value>
                         </property></properties>
                     </configuration>
                 </plugin>

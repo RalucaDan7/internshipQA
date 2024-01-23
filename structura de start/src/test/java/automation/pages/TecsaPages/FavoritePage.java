@@ -1,7 +1,5 @@
 package automation.pages.TecsaPages;
 
-import automation.base.DriverUtil;
-import automation.baseTest.BaseTest;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

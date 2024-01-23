@@ -1,11 +1,10 @@
 package automation.pages.RalucaPages;
 
-import automation.base.DriverUtil;
+import base.structura de start.src.test.automation.DriverUtil;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,7 +28,6 @@ public class BluzeSiHanoraceFetePage {
 
     public void checkBluzaCuVolanePentruFeteIsDisplayed() {
         Assert.assertTrue("Bluza cu volane pentru fete is not displayed", bluzaCuVolanePentruFeteText.isDisplayed());
-
     }
 
     public void checkDisplayedProducts(String product) {
